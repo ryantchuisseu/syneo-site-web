@@ -21,6 +21,7 @@
 
 
 
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=Instrument+Serif&family=IBM+Plex+Mono:wght@500&display=swap">
@@ -35,15 +36,15 @@
   --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
   --serif:"Instrument Serif", Georgia, "Times New Roman", serif;
-  --gold:#F2A93B; --deep:#0E1527; --hl2:#D9560A;
+  --gold:#F2A93B; --deep:#0E1527; --tb-card:#F3EADB; --hl2:#D9560A;
   --une-bg:#EEF1F6; --card-a:#F4F6FA; --card-w:#FBF3E6; --fig-a:#E2E8F2; --fig-w:#F4E4CC; --fig-w-ink:#8A4712;
   --r:14px; --max:1180px;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){ --hl2:#FF8A3D;
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){ --tb-card:#1C2741; --hl2:#FF8A3D;
   --une-bg:#101A30; --card-a:#18233D; --card-w:#2A2116; --fig-a:#22304F; --fig-w:#3A2C1A; --fig-w-ink:#F5B36E;
   --bg:#0D1526; --surface:#152039; --ink:#E9EEF7; --muted:#9AA7C0; --line:#26345A;
   --navy-soft:#1C2B4D; --orange-soft:#3A2416; --link:#9DBBEA; --hot:#FF8F45; color-scheme:dark}}
-:root[data-theme="dark"]{ --hl2:#FF8A3D;
+:root[data-theme="dark"]{ --tb-card:#1C2741; --hl2:#FF8A3D;
   --une-bg:#101A30; --card-a:#18233D; --card-w:#2A2116; --fig-a:#22304F; --fig-w:#3A2C1A; --fig-w-ink:#F5B36E;
   --bg:#0D1526; --surface:#152039; --ink:#E9EEF7; --muted:#9AA7C0; --line:#26345A;
   --navy-soft:#1C2B4D; --orange-soft:#3A2416; --link:#9DBBEA; --hot:#FF8F45; color-scheme:dark}
@@ -408,7 +409,7 @@ textarea{min-height:120px;resize:vertical}
 @media (max-width:700px){.vx-words{align-items:flex-end;justify-content:center;gap:10px;padding-bottom:22vh}.vx-words span{position:static;transform:none!important;font-size:26px}}
 
 /* À la une — version affinée : cartes douces, icônes, bouton verre */
-#une{background:linear-gradient(180deg,var(--bg),var(--une-bg) 30%,var(--une-bg) 80%,var(--bg))}
+
 .hero .art{height:270px}
 .hero .meta span{display:inline-flex;align-items:center;gap:7px}
 .hero .meta svg{width:17px;height:17px;flex:none;stroke:#C9D5EA;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
@@ -552,6 +553,30 @@ footer .r{margin-left:0}
 .hx-chip .cd{font:500 12px var(--mono);font-variant-numeric:tabular-nums;background:var(--ink);color:var(--bg);padding:5px 10px;border-radius:999px;white-space:nowrap}
 @keyframes pulse{50%{opacity:.25}}
 @media (max-width:480px){.hx-chip{font-size:12.5px;gap:8px;flex-wrap:wrap;justify-content:center;padding:6px 10px}}
+/* La tribune */
+.tb{padding-block:88px 96px}
+.tb-head{display:grid;gap:14px;max-width:760px;margin-bottom:44px}
+.tb-eye{color:var(--hot)}
+.tb-head h2{font:600 clamp(36px,5vw,64px)/1.02 var(--display);letter-spacing:-.045em;color:var(--link)}
+.tb-head h2 em{font:inherit;color:var(--link)}
+.tb-head p{color:var(--muted);font-size:17px;max-width:48ch}
+.tb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tb-card{display:flex;flex-direction:column;gap:14px;padding:24px 24px 0;border-radius:22px;background:var(--tb-card);color:var(--ink);text-decoration:none;overflow:hidden;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s}
+.tb-card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(15,25,50,.14)}
+.tb-card.hot{background:var(--orange);color:#fff}
+.tb-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+.tb-top h3{font:600 clamp(24px,2.3vw,30px)/1.05 var(--display);letter-spacing:-.03em}
+.tb-ar{flex:none;width:40px;height:40px;padding:9px;border-radius:10px;background:var(--orange);stroke:#fff;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s}
+.tb-card.hot .tb-ar{background:#fff;stroke:var(--orange)}
+.tb-card:hover .tb-ar{transform:rotate(45deg)}
+.tb-card p{font-size:15px;line-height:1.5;color:var(--muted);min-height:4.5em}
+.tb-card.hot p{color:#FFE8D8}
+.tb-art{margin:auto -24px 0;border-radius:16px 16px 0 0;overflow:hidden;line-height:0}
+.tb-art svg{width:100%;height:auto;display:block}
+.tb-slogan{margin:72px 0 0;text-align:center;font:800 clamp(30px,5.4vw,72px)/1 var(--display);letter-spacing:-.03em;text-transform:uppercase;color:var(--link);text-wrap:balance}
+.tb-slogan span{color:var(--orange)}
+.tb-cap{text-align:center;color:var(--muted);font-size:14px;margin-top:18px}
+@media (max-width:900px){.tb-grid{grid-template-columns:1fr;max-width:520px}.tb-card p{min-height:0}}
 footer{background:var(--navy);color:#C9D5EA;font-size:14px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;padding-block:26px}
 footer b{color:#fff;font-family:var(--display);font-size:18px}
@@ -647,47 +672,56 @@ footer .r{margin-left:auto}
   </div>
 </section>
 
-<!-- À LA UNE -->
-<section id="une" style="padding-block:48px 40px">
-  <div class="wrap"><div class="ed-head"><span class="label ed-eye">À la une</span><h2>L'essentiel, <em>en un coup d'œil.</em></h2></div></div>
-  <div class="wrap une">
-    <article class="hero">
-      <div class="art date-art"><div class="da-in"><span class="label">Conférence inaugurale</span><b>18.11</b><span class="da-y">2026 · 11h – 15h · ENSPY, Yaoundé</span></div></div>
-      <div class="body">
-        <span class="label tag">À la une · Événement</span>
-        <h2>PRISME : une plateforme nationale pour faire émerger les solutions de demain</h2>
-        <p>Conférences, incubation, série documentaire et Forum National : 13 mois pour connecter les jeunes talents de l'Ingénierie Logicielle et de l'Intelligence Artificielle à tout l'écosystème entrepreneurial camerounais.</p>
-        <div class="meta">
-          <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Date <b>18 novembre 2026, 11h00 – 15h00</b></span>
-          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Lieu <b>ENSPY, Yaoundé</b></span>
-          <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.6c2.8.2 5 2 5 5"/></svg>Public <b>500 à 1 000 participants</b></span>
-        </div>
-        <div class="actions">
-          <a class="btn btn-glass" href="https://wa.me/237657300479?text=Bonjour%20SYNEO%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20la%20conf%C3%A9rence%20inaugurale%20PRISME%20du%2018%20novembre." target="_blank" rel="noopener">S'inscrire sur WhatsApp</a>
-          <a class="btn btn-g" href="#programme">Découvrir le programme</a>
-        </div>
-      </div>
-    </article>
-    <div class="side">
-      <a class="mini" href="#rubriques">
-        <div class="fig k-a">60 000<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><rect x="10" y="10" width="4" height="4"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg><small>spécialistes IA</small></div>
-        <div><span class="label cat">Opportunités</span><h3>SNIA : le Cameroun vise 60&nbsp;000 spécialistes IA d'ici 2040</h3><p>Dont 40 % de femmes. Ce que la stratégie change pour les jeunes.</p></div>
+<!-- LA TRIBUNE -->
+<section id="une" class="tb">
+  <div class="wrap">
+    <div class="tb-head">
+      <span class="label tb-eye">La tribune</span>
+      <h2>La parole aux <em>bâtisseurs.</em></h2>
+      <p>Trois façons de prendre la parole. Les membres publient, l'équipe SYNEO relit et vérifie chaque contenu avant la mise en ligne.</p>
+    </div>
+    <div class="tb-grid">
+      <a class="tb-card" href="#contribuer">
+        <div class="tb-top"><h3>Raconte<br>ton parcours</h3><svg class="tb-ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+        <p>Porteur de projet ? Partage tes réussites, tes galères et ce que tu as appris en chemin.</p>
+        <div class="tb-art"><svg viewBox="0 0 300 150" aria-hidden="true"><rect width="300" height="150" fill="#1B2D52"/>
+<rect x="28" y="16" width="96" height="70" rx="4" fill="#0E1A33" stroke="#33508A" stroke-width="3"/><line x1="76" y1="16" x2="76" y2="86" stroke="#33508A" stroke-width="3"/><line x1="28" y1="51" x2="124" y2="51" stroke="#33508A" stroke-width="3"/>
+<circle cx="102" cy="32" r="8" fill="#F7E3B0"/><circle cx="98" cy="30" r="7" fill="#0E1A33"/>
+<g fill="#F7E3B0"><circle cx="44" cy="28" r="1.4"/><circle cx="58" cy="40" r="1.2"/><circle cx="90" cy="66" r="1.3"/><circle cx="46" cy="70" r="1.1"/><circle cx="112" cy="72" r="1.2"/></g>
+<rect x="0" y="118" width="300" height="32" fill="#14234A"/><rect x="150" y="104" width="120" height="8" rx="2" fill="#3A2A1E"/><rect x="160" y="112" width="6" height="30" fill="#3A2A1E"/><rect x="254" y="112" width="6" height="30" fill="#3A2A1E"/>
+<path d="M190 104h44l-4-30h-36z" fill="#2A3D66"/><path d="M196 100h32l-3-22h-26z" fill="#9CC3FF" opacity=".85"/><ellipse cx="212" cy="90" rx="40" ry="18" fill="#9CC3FF" opacity=".12"/>
+<circle cx="168" cy="76" r="8" fill="#F2701E"/><path d="M158 112v-20a10 10 0 0 1 20 0v20z" fill="#F2701E"/><path d="M176 96l14 4" stroke="#F2701E" stroke-width="5" stroke-linecap="round"/>
+<rect x="14" y="104" width="16" height="14" rx="2" fill="#B5542A"/><path d="M22 104c-10-6-8-18 0-22 8 4 10 16 0 22z" fill="#2E9C8A"/><path d="M22 104c-2-10 6-16 12-14-2 8-6 12-12 14z" fill="#3FB39E"/></svg></div>
       </a>
-      <a class="mini warm" href="#rubriques">
-        <svg class="corner" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-        <div class="fig k-w">27,7 %<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg><small>survie à 5 ans</small></div>
-        <div><span class="label cat">Entrepreneuriat</span><h3>Pourquoi 7 entreprises sur 10 ne passent pas le cap des 5 ans</h3><p>Le constat qui a fait naître PRISME (CAMERCAP-PARC).</p></div>
+      <a class="tb-card hot" href="#contribuer">
+        <div class="tb-top"><h3>Partage<br>ton expertise</h3><svg class="tb-ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+        <p>Développeur, chercheur, mentor ? Publie une analyse ou un tutoriel pour celles et ceux qui démarrent.</p>
+        <div class="tb-art"><svg viewBox="0 0 300 150" aria-hidden="true"><rect width="300" height="150" fill="#1B2D52"/>
+<rect x="0" y="122" width="300" height="28" fill="#14234A"/>
+<rect x="70" y="18" width="150" height="88" rx="4" fill="#F4F1EA"/><rect x="142" y="106" width="6" height="18" fill="#C9CFDB"/>
+<g fill="#1B3B6E"><rect x="88" y="78" width="12" height="18"/><rect x="106" y="66" width="12" height="30"/><rect x="124" y="56" width="12" height="40"/></g><rect x="142" y="44" width="12" height="52" fill="#F2701E"/>
+<polyline points="90,60 112,50 130,42 150,30 200,26" fill="none" stroke="#3D78C9" stroke-width="2.5"/><circle cx="182" cy="66" r="18" fill="none" stroke="#E2A21B" stroke-width="8" stroke-dasharray="70 120"/>
+<g><rect x="18" y="28" width="22" height="20" fill="#F2A93B" transform="rotate(-6 29 38)"/><rect x="22" y="58" width="22" height="20" fill="#2E9C8A" transform="rotate(5 33 68)"/><rect x="246" y="30" width="22" height="20" fill="#F2701E" transform="rotate(6 257 40)"/><rect x="250" y="62" width="22" height="20" fill="#7B5BC2" transform="rotate(-4 261 72)"/></g>
+<circle cx="236" cy="96" r="8" fill="#F2701E"/><path d="M226 132v-22a10 10 0 0 1 20 0v22z" fill="#F2701E"/><path d="M228 108l-26-14" stroke="#F4F1EA" stroke-width="2.5" stroke-linecap="round"/><path d="M230 112l-8-10" stroke="#F2701E" stroke-width="5" stroke-linecap="round"/></svg></div>
       </a>
-      <a class="mini warm" href="#rubriques">
-        <svg class="corner" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2M14.5 4.5c3-1.5 5.5-1.5 5.5-1.5s0 2.5-1.5 5.5L12 15l-3-3 5.5-7.5z"/><path d="M9 12l-3-1 3-4 3 1M12 15l1 3 4-3-1-3"/></svg>
-        <div class="fig k-w">207<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2M14.5 4.5c3-1.5 5.5-1.5 5.5-1.5s0 2.5-1.5 5.5L12 15l-3-3 5.5-7.5z"/><circle cx="15.5" cy="8.5" r="1.3"/></svg><small>start-up IA</small></div>
-        <div><span class="label cat">Innovation</span><h3>Start-up IA africaines : 86 % de survie en 2025</h3><p>17 pays, un doublement en trois ans.</p></div>
-      </a>
-      <a class="mini" href="#prisme">
-        <div class="fig k-a">24<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M10 9l5 2.5-5 2.5z"/><path d="M8 21h8"/></svg><small>épisodes</small></div>
-        <div><span class="label cat">Les Bâtisseurs</span><h3>La série documentaire de PRISME arrive sur la CRTV</h3><p>Premier tournage le jour de la conférence inaugurale.</p></div>
+      <a class="tb-card" href="#contribuer">
+        <div class="tb-top"><h3>Fais grandir<br>le réseau</h3><svg class="tb-ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+        <p>Une rencontre, une offre de stage, un appel à projets ? Propose-le à toute la communauté.</p>
+        <div class="tb-art"><svg viewBox="0 0 300 150" aria-hidden="true"><rect width="300" height="150" fill="#1B2D52"/>
+<path d="M0 22 Q75 48 150 22 T300 22" fill="none" stroke="#33508A" stroke-width="2"/>
+<g fill="#F7C45C"><circle cx="20" cy="27" r="4"/><circle cx="50" cy="34" r="4"/><circle cx="80" cy="36" r="4"/><circle cx="110" cy="33" r="4"/><circle cx="140" cy="25" r="4"/><circle cx="170" cy="27" r="4"/><circle cx="200" cy="34" r="4"/><circle cx="230" cy="36" r="4"/><circle cx="260" cy="32" r="4"/><circle cx="290" cy="25" r="4"/></g>
+<g fill="#F7C45C" opacity=".18"><circle cx="50" cy="34" r="10"/><circle cx="110" cy="33" r="10"/><circle cx="170" cy="27" r="10"/><circle cx="230" cy="36" r="10"/></g>
+<rect x="0" y="122" width="300" height="28" fill="#14234A"/>
+<circle cx="120" cy="76" r="9" fill="#F2701E"/><path d="M109 124v-28a11 11 0 0 1 22 0v28z" fill="#F2701E"/>
+<circle cx="182" cy="76" r="9" fill="#F4F1EA"/><path d="M171 124v-28a11 11 0 0 1 22 0v28z" fill="#3D78C9"/>
+<path d="M130 100l20 4 22-4" stroke="#F2A93B" stroke-width="5" stroke-linecap="round" fill="none"/><circle cx="151" cy="104" r="4" fill="#F7C45C"/>
+<path d="M190 96l14-18" stroke="#3D78C9" stroke-width="5" stroke-linecap="round"/>
+<rect x="244" y="106" width="18" height="16" rx="2" fill="#B5542A"/><path d="M253 106c-12-8-8-22 0-26 8 4 12 18 0 26z" fill="#2E9C8A"/>
+<rect x="34" y="106" width="18" height="16" rx="2" fill="#B5542A"/><path d="M43 106c-10-4-12-16-4-22 6 6 8 14 4 22z" fill="#3FB39E"/></svg></div>
       </a>
     </div>
+    <p class="tb-slogan">Partage ce que tu <span>bâtis</span>,<br>d'autres <span>bâtiront avec toi.</span></p>
+    <p class="tb-cap">La tribune SYNEO : chaque contenu est vérifié par l'équipe avant publication.</p>
   </div>
 </section>
 
