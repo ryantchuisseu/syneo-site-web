@@ -19,6 +19,7 @@
 
 
 
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=Instrument+Serif&family=IBM+Plex+Mono:wght@500&display=swap">
@@ -162,6 +163,7 @@ section{padding-block:104px}
 /* Accueil : titre centré, prisme en trame de points */
 .hx{position:relative;overflow:hidden;background:var(--bg);padding-block:24px 0}
 .hx-dots{position:absolute;left:0;bottom:0;width:40%;height:62%;pointer-events:none}
+.hx-dots-r{left:auto;right:0;transform:scaleX(-1)}
 .hx-in{position:relative}
 .hx-copy{--hxpb:430px;position:relative;z-index:2;isolation:isolate;max-width:1000px;margin:0 auto;text-align:center;display:grid;gap:20px;justify-items:center;padding:4px 24px var(--hxpb)}
 .hx-copy p{text-shadow:0 0 14px var(--bg),0 0 4px var(--bg)}
@@ -606,6 +608,7 @@ footer .r{margin-left:auto}
 <!-- ACCUEIL -->
 <section id="accueil" class="hx">
   <canvas class="hx-dots" id="dots" aria-hidden="true"></canvas>
+  <canvas class="hx-dots hx-dots-r" id="dots2" aria-hidden="true"></canvas>
   <div class="hx-art"><canvas id="pyr" aria-label="Prisme doré en 3D qui tourne, dessiné en points de trame" role="img"></canvas></div>
   <div class="wrap hx-in">
     <div class="hx-copy">
@@ -1233,9 +1236,9 @@ document.getElementById('f-copy').addEventListener('click',e=>copy(msg,e.current
   }
   new IntersectionObserver(es=>{visible=es[0].isIntersecting}).observe(pc);
   /* Nuage de points en bas à gauche */
-  const dc=document.getElementById('dots');
-  function field(){
-    const {ctx,w,h}=setup(dc); const R=rng(21); const step=7;
+  function field(){ ['dots','dots2'].forEach((id,n)=>{ const dc=document.getElementById(id); if(dc) fieldOn(dc,n) }) }
+  function fieldOn(dc,n){
+    const {ctx,w,h}=setup(dc); const R=rng(21+n*13); const step=7;
     ctx.clearRect(0,0,w,h);
     for(let y=0,row=0;y<h+step;y+=step*.87,row++){
       for(let x=(row%2)*step/2;x<w+step;x+=step){
