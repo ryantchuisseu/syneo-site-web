@@ -24,6 +24,7 @@
 
 
 
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=Instrument+Serif&family=IBM+Plex+Mono:wght@500&display=swap">
@@ -598,14 +599,13 @@ footer .r{margin-left:0}
   .sc-a,.sc-b{text-align:center;font-size:26px;flex:none}
   .sc-a br,.sc-b br{display:none}
   .pills{width:100%!important;height:auto!important;display:flex!important;flex-wrap:wrap;justify-content:center;gap:8px}
-  .pill{opacity:1!important;transform:none!important;filter:none!important;font-size:13px;padding:8px 12px}
+  .pill{font-size:13px;padding:8px 12px}
   .scn .imp-big{transform:none!important;font-size:clamp(48px,15vw,72px)}
-  .scn .tiles{transform:none!important;opacity:1!important}
+  .scn .tiles{transform:scaleX(var(--ts,1));opacity:var(--ts,1);transform-origin:left center}
   .scn .tiles i{width:44px;height:52px}
   .sc2-in,.scn .imp-txt{max-width:100%;min-width:0}
   .scn .imp-txt{font-size:18px}
-  .scn .imp-txt .w{opacity:1!important;filter:none!important}
-  .scn .imp-link{opacity:1!important}
+  .scn .imp-link{opacity:var(--lo,1)!important}
   .imp-after{margin-top:24px!important}
   /* Roue des rubriques : liste simple */
   .wh{height:auto!important;margin-top:0!important}
@@ -623,6 +623,13 @@ footer .r{margin-left:0}
   footer .wrap{padding-bottom:96px!important}
   .guide-btn,.guide-btn .av-i{width:56px;height:56px}
 }
+/* Animations téléphone */
+@media (max-width:760px){
+  .rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+  .rv.in{opacity:1;transform:none}
+  .vx-frame{will-change:transform}
+}
+@media (max-width:760px) and (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
 footer{background:var(--navy);color:#C9D5EA;font-size:14px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;padding-block:26px}
 footer b{color:#fff;font-family:var(--display);font-size:18px}
@@ -1538,6 +1545,46 @@ document.getElementById('f-copy').addEventListener('click',e=>copy(msg,e.current
   }
   addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(update)}},{passive:true});
   addEventListener('resize',layout); layout();
+})();
+
+/* Animations téléphone : liées au défilement, sans épinglage */
+(function(){
+  const mq=matchMedia('(max-width:760px)'), reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const cl=x=>Math.max(0,Math.min(1,x)), ease=x=>1-Math.pow(1-x,3);
+  const rvSel='.tb-card,.tb-slogan,.art-card,.rubcol h3,.step,.mem,.tier,.pgrp,.talk,.dk-3>div,.dk-stats>div,.hx-stat,.imp-stats>div,.ed-head,.wi';
+  let io=null;
+  function setupReveal(){
+    if(io) io.disconnect();
+    const els=[...document.querySelectorAll(rvSel)];
+    if(!mq.matches||reduce){els.forEach(e=>e.classList.remove('rv','in'));return}
+    io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){const el=en.target;const sib=[...el.parentElement.children].filter(c=>c.classList.contains('rv'));el.style.transitionDelay=Math.min(sib.indexOf(el),4)*80+'ms';el.classList.add('in');io.unobserve(el)}}),{rootMargin:'0px 0px -12% 0px'});
+    els.forEach(e=>{if(!e.classList.contains('in')){e.classList.add('rv');io.observe(e)}});
+  }
+  function prog(el,a=.95,b=.35){const r=el.getBoundingClientRect(),vh=innerHeight;return cl((vh*a-r.top)/(vh*(a-b)))}
+  let tick=false;
+  function update(){
+    tick=false; if(!mq.matches) return;
+    if(reduce){document.querySelectorAll('.pill,.imp-txt .w').forEach(e=>e.classList.add('on'));return}
+    // film : la carte grandit en entrant
+    const fr=document.querySelector('.vx-frame');
+    if(fr&&fr.offsetParent){const k=ease(prog(fr,1,.45));fr.style.setProperty('transform',`scale(${.84+.16*k})`,'important');fr.style.setProperty('border-radius',(32-14*k)+'px','important')}
+    // questions : les bulles apparaissent une à une
+    const pl=document.querySelector('.pills');
+    if(pl&&pl.offsetParent){const pills=[...pl.children],k=prog(pl,.9,.3),n=Math.floor(k*pills.length+.001);pills.forEach((e,i)=>e.classList.toggle('on',i<n))}
+    // Bâtir ensemble : tuiles qui s'ouvrent, texte qui sort du flou
+    const st=document.querySelector('.scn .sc-stick'), big=document.querySelector('.scn .imp-big');
+    if(st&&big&&big.offsetParent){st.style.setProperty('--ts',ease(prog(big,.9,.55)).toFixed(3))}
+    const tx=document.querySelector('.scn .imp-txt');
+    if(tx&&tx.offsetParent){const w=[...tx.querySelectorAll('.w')],k=prog(tx,.92,.42),n=Math.floor(k*w.length+.001);w.forEach((e,i)=>e.classList.toggle('on',i<n));st&&st.style.setProperty('--lo',cl((k-.85)/.15).toFixed(2))}
+    // rubriques : cartes qui glissent depuis l'arc
+    document.querySelectorAll('.wi').forEach((el,i)=>{if(!el.offsetParent)return;const k=ease(prog(el,1.02,.6)),dir=i%2?1:-1;el.style.setProperty('transform',`translateX(${(1-k)*dir*40}%) rotate(${(1-k)*dir*8}deg)`,'important');el.style.setProperty('opacity',(.2+.8*k).toFixed(2),'important')});
+  }
+  function reset(){if(mq.matches)return;document.querySelectorAll('.vx-frame,.wi').forEach(e=>{e.style.removeProperty('transform');e.style.removeProperty('opacity');e.style.removeProperty('border-radius')})}
+  addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(update)}},{passive:true});
+  addEventListener('resize',()=>{reset();update()});
+  addEventListener('hashchange',()=>setTimeout(()=>{setupReveal();update()},60));
+  mq.addEventListener?mq.addEventListener('change',()=>{reset();setupReveal();update()}):0;
+  setupReveal(); update();
 })();
 </script>
 </body>
