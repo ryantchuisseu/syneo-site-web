@@ -15,6 +15,7 @@
 <style>html,body{margin:0}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
 
 
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=Instrument+Serif&family=IBM+Plex+Mono:wght@500&display=swap">
@@ -29,15 +30,15 @@
   --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
   --serif:"Instrument Serif", Georgia, "Times New Roman", serif;
-  --gold:#F2A93B; --deep:#0E1527;
+  --gold:#F2A93B; --deep:#0E1527; --hl2:#D9560A;
   --une-bg:#EEF1F6; --card-a:#F4F6FA; --card-w:#FBF3E6; --fig-a:#E2E8F2; --fig-w:#F4E4CC; --fig-w-ink:#8A4712;
   --r:14px; --max:1180px;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){ --hl2:#FF8A3D;
   --une-bg:#101A30; --card-a:#18233D; --card-w:#2A2116; --fig-a:#22304F; --fig-w:#3A2C1A; --fig-w-ink:#F5B36E;
   --bg:#0D1526; --surface:#152039; --ink:#E9EEF7; --muted:#9AA7C0; --line:#26345A;
   --navy-soft:#1C2B4D; --orange-soft:#3A2416; --link:#9DBBEA; --hot:#FF8F45; color-scheme:dark}}
-:root[data-theme="dark"]{
+:root[data-theme="dark"]{ --hl2:#FF8A3D;
   --une-bg:#101A30; --card-a:#18233D; --card-w:#2A2116; --fig-a:#22304F; --fig-w:#3A2C1A; --fig-w-ink:#F5B36E;
   --bg:#0D1526; --surface:#152039; --ink:#E9EEF7; --muted:#9AA7C0; --line:#26345A;
   --navy-soft:#1C2B4D; --orange-soft:#3A2416; --link:#9DBBEA; --hot:#FF8F45; color-scheme:dark}
@@ -167,7 +168,10 @@ section{padding-block:104px}
 .hx .btn-g{background:var(--bg)}
 .hx h1{font:600 clamp(34px,5.3vw,64px)/1.04 var(--display);letter-spacing:-.035em}
 .hx h1 .l1{color:var(--link)}
-.hx h1 .l2{display:block;color:var(--orange)}
+.hx h1 .l2{display:block;color:var(--hl2)}
+.hx h1{position:relative;isolation:isolate;text-shadow:0 0 18px var(--bg),0 0 6px var(--bg),0 0 2px var(--bg)}
+.hx h1::before{content:"";position:absolute;inset:-14% -8%;z-index:-1;background:radial-gradient(closest-side,var(--bg) 62%,transparent);pointer-events:none}
+.hx-copy p::before{content:none}
 .hx-copy p{color:var(--muted);max-width:58ch;font-size:17px}
 .hx-copy .actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
 .hx-low{position:relative;z-index:1;max-width:900px;margin:0 auto}
@@ -371,11 +375,11 @@ textarea{min-height:120px;resize:vertical}
 .mq:hover .mq-run{animation-play-state:paused}
 .lg{white-space:nowrap;color:var(--muted);opacity:.85;transition:color .2s,opacity .2s}
 .lg:hover{color:var(--ink);opacity:1}
-.l1{font:800 20px var(--display);letter-spacing:.04em}
-.l2{font:400 26px var(--serif);font-style:italic}
-.l3{font:500 17px var(--mono);letter-spacing:.14em}
-.l4{font:600 17px var(--body);text-transform:uppercase;letter-spacing:.02em}
-.l5{font:700 21px var(--display);letter-spacing:-.03em}
+.lg.l1{font:800 20px var(--display);letter-spacing:.04em}
+.lg.l2{font:400 26px var(--serif);font-style:italic}
+.lg.l3{font:500 17px var(--mono);letter-spacing:.14em}
+.lg.l4{font:600 17px var(--body);text-transform:uppercase;letter-spacing:.02em}
+.lg.l5{font:700 21px var(--display);letter-spacing:-.03em}
 @media (max-width:900px){.imp-stats{grid-template-columns:repeat(3,1fr)}.imp-stats .imp-cap{grid-column:1/-1;max-width:none}}
 @media (max-width:480px){.imp-stats{grid-template-columns:1fr 1fr}}
 
