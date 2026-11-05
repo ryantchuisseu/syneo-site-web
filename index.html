@@ -1,0 +1,1446 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SYNEO — La Synergie pour le développement</title>
+<meta name="description" content="SYNEO forme, informe et met en réseau les porteurs de projets et les jeunes entrepreneurs. Découvrez PRISME, le programme national de réseautage et d'innovation : lancement le 18 novembre 2026 à l'ENSPY, Yaoundé.">
+<meta name="theme-color" content="#1B3B6E">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SYNEO — La Synergie pour le développement">
+<meta property="og:description" content="Connecter les talents, construire le développement. PRISME : conférence inaugurale le 18 novembre 2026 à l'ENSPY, Yaoundé.">
+<meta property="og:image" content="film-poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>html,body{margin:0}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=Instrument+Serif&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout : portail média à rubriques (type RFI) — bandeau « direct », barre de rubriques, À la une, puis un bloc clair par rubrique. Un seul geste fort : le prisme PRISME qui diffracte en 5 filières. */
+:root{
+  --navy:#1B3B6E; --orange:#F2701E;
+  --bg:#F7F5F1; --surface:#FFFFFF; --ink:#13213B; --muted:#5A6782; --line:#DCE2EE;
+  --navy-soft:#E6ECF6; --orange-soft:#FDEBDD; --on-navy:#FFFFFF; --link:#1B3B6E; --hot:#C9500A;
+  --f1:#F2701E; --f2:#E2A21B; --f3:#2E9C8A; --f4:#3D78C9; --f5:#7B5BC2;
+  --display:"Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
+  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --serif:"Instrument Serif", Georgia, "Times New Roman", serif;
+  --gold:#F2A93B; --deep:#0E1527;
+  --une-bg:#EEF1F6; --card-a:#F4F6FA; --card-w:#FBF3E6; --fig-a:#E2E8F2; --fig-w:#F4E4CC; --fig-w-ink:#8A4712;
+  --r:14px; --max:1180px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --une-bg:#101A30; --card-a:#18233D; --card-w:#2A2116; --fig-a:#22304F; --fig-w:#3A2C1A; --fig-w-ink:#F5B36E;
+  --bg:#0D1526; --surface:#152039; --ink:#E9EEF7; --muted:#9AA7C0; --line:#26345A;
+  --navy-soft:#1C2B4D; --orange-soft:#3A2416; --link:#9DBBEA; --hot:#FF8F45; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --une-bg:#101A30; --card-a:#18233D; --card-w:#2A2116; --fig-a:#22304F; --fig-w:#3A2C1A; --fig-w-ink:#F5B36E;
+  --bg:#0D1526; --surface:#152039; --ink:#E9EEF7; --muted:#9AA7C0; --line:#26345A;
+  --navy-soft:#1C2B4D; --orange-soft:#3A2416; --link:#9DBBEA; --hot:#FF8F45; color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--body)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--navy)}
+a{color:var(--link)}
+h1,h2,h3{font-family:var(--display);line-height:1.12;text-wrap:balance;margin:0}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.label{font:500 12px/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px;border-radius:4px}
+
+/* Bandeau direct */
+.live{background:var(--navy);color:var(--on-navy)}
+.live .wrap{display:flex;align-items:center;gap:14px;padding-block:8px;flex-wrap:wrap;font-size:14px}
+.live .dot{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;padding:3px 10px;border-radius:999px}
+.live .dot::before{content:"";width:7px;height:7px;border-radius:50%;background:#fff;animation:pulse 1.4s infinite}
+@keyframes pulse{50%{opacity:.25}}
+.live .cd{margin-left:auto;font:500 13px var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* En-tête */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;height:0;overflow:visible}
+.hdr-space{height:78px}
+.bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px 24px;padding-block:14px;background:var(--bg);border-radius:0;box-shadow:0 0 0 1px transparent;transition:max-width .45s cubic-bezier(.2,.8,.2,1),margin .45s cubic-bezier(.2,.8,.2,1),border-radius .45s,padding .45s,background .3s,box-shadow .3s}
+header.top.scrolled .bar{max-width:1080px;margin-top:10px;width:calc(100% - 24px);border-radius:999px;padding-block:7px;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(8px,env(safe-area-inset-right,0px));background:color-mix(in srgb,var(--surface) 88%,transparent);-webkit-backdrop-filter:blur(14px) saturate(1.4);backdrop-filter:blur(14px) saturate(1.4);box-shadow:0 0 0 1px var(--line),0 10px 30px rgba(15,25,50,.12)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.brand img{transition:width .3s,height .3s;width:46px;height:46px;border-radius:12px;background:#fff;object-fit:contain;border:1px solid var(--line)}
+.brand .name{font:800 26px/1 var(--display);letter-spacing:-.01em}
+.brand .name b{color:var(--orange);font-weight:800}
+.brand .name span{color:var(--navy)}
+:root[data-theme="dark"] .brand .name span{color:var(--ink)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .brand .name span{color:var(--ink)}}
+.brand small{display:block;color:var(--muted);font-size:13px;margin-top:4px}
+.cta{justify-self:end;flex:none}
+.cta svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.cta:hover svg{transform:translateX(3px)}
+header.top.scrolled .brand img{width:36px;height:36px}
+header.top.scrolled .brand small{display:none}
+header.top.scrolled .brand .name{font-size:21px}
+header.top.scrolled .cta{padding:9px 16px;font-size:14px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font:600 15px var(--body);padding:11px 18px;border-radius:999px;text-decoration:none;transition:transform .15s, background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-o{background:var(--orange);color:#fff}
+.btn-o:hover{background:var(--hot)}
+.btn-n{background:var(--navy);color:#fff}
+.btn-g{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+nav.rub{justify-self:center;min-width:0}
+nav.rub ul{list-style:none;margin:0;padding:0;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav.rub ul::-webkit-scrollbar{display:none}
+nav.rub a{display:block;white-space:nowrap;padding:8px 14px;border-radius:999px;color:var(--muted);text-decoration:none;font-weight:500;font-size:15px;transition:color .2s,background .2s}
+nav.rub a:hover{color:var(--ink)}
+nav.rub a.on{color:var(--ink);background:var(--navy-soft)}
+@media (max-width:1080px){.bar{grid-template-columns:1fr auto}nav.rub{grid-column:1/-1;justify-self:stretch;order:3}.hdr-space{height:122px}header.top.scrolled .bar{border-radius:22px}}
+@media (max-width:620px){.cta{display:none}.brand .name{font-size:22px}}
+
+/* Sections */
+section{padding-block:104px}
+@media (max-width:700px){section{padding-block:72px}}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:26px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(26px,3.4vw,36px)}
+.sec-head h2::before{content:"";display:inline-block;width:12px;height:12px;background:var(--orange);border-radius:3px;margin-right:12px;vertical-align:.18em}
+.sec-head .more{margin-left:auto;font-weight:600;text-decoration:none}
+.lead{color:var(--muted);max-width:64ch;font-size:17px}
+
+/* À la une */
+.une{display:grid;grid-template-columns:1.55fr 1fr;gap:22px}
+.hero{background:var(--navy);color:#fff;border-radius:var(--r);overflow:hidden;display:grid;grid-template-rows:auto 1fr;min-width:0}
+.hero .art{position:relative;height:250px;background:linear-gradient(160deg,#16305A,#1B3B6E 60%,#21477F)}
+.hero .art canvas{position:absolute;inset:0;width:100%;height:100%}
+.hero .body{padding:26px 28px 28px;display:grid;gap:14px;align-content:start}
+.hero .tag{color:#FFB27D}
+.hero h2{font-size:clamp(26px,3.2vw,38px);font-weight:800}
+.hero p{color:#C9D5EA;max-width:58ch}
+.hero .meta{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:14px;color:#DCE5F4}
+.hero .meta b{color:#fff}
+.hero .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
+.hero .btn-g{color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4)}
+.side{display:grid;gap:14px;grid-auto-rows:1fr;min-width:0}
+.mini{align-items:center;transition:border-color .15s,transform .2s,box-shadow .2s}
+.mini:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,25,50,.08)}
+.mini .fig{height:100%}
+.mini{display:grid;grid-template-columns:96px 1fr;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px;text-decoration:none;color:inherit;transition:border-color .15s}
+.mini:hover{border-color:var(--orange)}
+.mini .fig{border-radius:10px;display:grid;place-items:center;font:800 22px/1 var(--display);text-align:center;padding:6px;min-height:86px}
+.mini .fig small{display:block;font:500 10px var(--mono);letter-spacing:.06em;margin-top:6px;text-transform:uppercase}
+.mini h3{font-size:17px;margin:4px 0 4px}
+.mini p{font-size:14px;color:var(--muted)}
+.k-o{background:var(--orange-soft);color:var(--hot)}
+.k-n{background:var(--navy-soft);color:var(--link)}
+.cat{color:var(--hot)}
+@media (max-width:900px){.une{grid-template-columns:1fr}}
+
+/* Flash */
+.flash{background:var(--surface);border-block:1px solid var(--line)}
+.flash .wrap{display:flex;gap:16px;align-items:center;padding-block:12px;overflow:hidden}
+.flash .label{background:var(--navy);color:#fff;padding:5px 10px;border-radius:6px;flex:none}
+.flash .track{overflow:hidden;flex:1;min-width:0;mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+.flash .run{display:flex;gap:48px;width:max-content;animation:run 38s linear infinite;font-weight:500}
+.flash .run span::before{content:"●";color:var(--orange);margin-right:10px;font-size:10px;vertical-align:2px}
+@keyframes run{to{transform:translateX(-50%)}}
+.flash:hover .run{animation-play-state:paused}
+
+/* Rubriques */
+.rubs{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.rubcol{min-width:0;display:grid;gap:12px;align-content:start}
+.rubcol h3{font-size:19px;padding-bottom:10px;border-bottom:3px solid var(--navy)}
+.rubcol h3 span{color:var(--orange)}
+.art-card{display:grid;gap:6px;padding:14px;background:var(--surface);border:1px solid var(--line);border-radius:12px;text-decoration:none;color:inherit}
+.art-card:hover{border-color:var(--orange)}
+.art-card h4{font:700 16px/1.3 var(--display);margin:0}
+.art-card .d{font:500 12px var(--mono);color:var(--muted)}
+.art-card p{font-size:14px;color:var(--muted)}
+@media (max-width:980px){.rubs{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.rubs{grid-template-columns:1fr}}
+
+/* Accueil : titre centré, prisme en trame de points */
+.hx{position:relative;overflow:hidden;background:var(--bg);padding-block:64px 0}
+.hx-dots{position:absolute;left:0;bottom:0;width:40%;height:62%;pointer-events:none}
+.hx-in{position:relative}
+.hx-copy{position:relative;z-index:2;max-width:1000px;margin:0 auto;text-align:center;display:grid;gap:22px;justify-items:center;padding-bottom:290px}
+.hx-copy p{text-shadow:0 0 14px var(--bg),0 0 4px var(--bg)}
+.hx .btn-g{background:var(--bg)}
+.hx h1{font:600 clamp(34px,5.3vw,64px)/1.04 var(--display);letter-spacing:-.035em}
+.hx h1 .l1{color:var(--link)}
+.hx h1 .l2{display:block;color:var(--orange)}
+.hx-copy p{color:var(--muted);max-width:58ch;font-size:17px}
+.hx-copy .actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.hx-low{position:relative;z-index:1;max-width:900px;margin:0 auto}
+.hx-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding-bottom:56px;position:relative;z-index:1;text-align:center}
+.hx-stat{border-top:1px solid var(--line);padding-top:14px;min-width:0}
+.hx-stat b{display:block;font:400 clamp(34px,3.6vw,46px)/1 var(--serif);color:var(--ink);font-variant-numeric:tabular-nums}
+.hx-stat span{display:block;font-size:13px;color:var(--muted);margin-top:8px;text-shadow:0 0 6px var(--bg),0 0 12px var(--bg),0 0 2px var(--bg)}
+.hx-stat b{text-shadow:0 0 10px var(--bg)}
+.hx-art{position:absolute;left:0;right:0;top:0;bottom:150px;z-index:0}
+.hx-art canvas{position:absolute;inset:0;width:100%;height:100%}
+@media (max-width:860px){.hx{padding-block:44px 0}.hx-copy{padding-bottom:230px}.hx-art{bottom:140px}}
+@media (max-width:480px){.hx-stats{grid-template-columns:1fr 1fr 1fr;gap:12px}.hx-stat b{font-size:26px}.hx-stat span{font-size:12px}}
+
+/* Qui sommes-nous : bande sombre */
+.dk{background:var(--deep);color:#E8EDF6}
+.dk .eyebrow{display:inline-flex;align-items:center;gap:10px;color:#9FB0CD}
+.dk .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--orange)}
+.dk-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center}
+.dk-art{position:relative;max-width:100%}
+.dk-art svg{width:100%;height:auto;display:block;margin-top:18px}
+.signed{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.faces{display:flex}
+.faces i{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font:700 11px var(--body);font-style:normal;color:#fff;border:2px solid var(--deep);margin-left:-8px}
+.faces i:first-child{margin-left:0;background:var(--navy)}
+.faces i:nth-child(2){background:var(--orange)}
+.faces i:nth-child(3){background:#3D78C9}
+.signed b{display:block;font-size:14px;font-weight:600}
+.signed small{color:#93A0BA;font-size:13px}
+.manif{font:500 clamp(22px,2.6vw,31px)/1.35 var(--display);letter-spacing:-.015em;max-width:32ch}
+.rw .w{transition:opacity .18s linear}
+.manif em{font-style:normal;color:var(--gold)}
+.dk-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.dk-3 .n{font:500 12px var(--mono);color:#93A0BA;letter-spacing:.08em}
+.dk-3 h3{font-size:18px;margin:10px 0 6px;color:#fff}
+.dk-3 p{font-size:14px;color:#93A0BA}
+.dk-stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:56px;border-top:1px solid rgba(255,255,255,.12)}
+.dk-stats div{padding:22px 18px 0;border-left:1px solid rgba(255,255,255,.12);min-width:0}
+.dk-stats div:first-child{border-left:0;padding-left:0}
+.dk-stats b{display:block;font:400 clamp(40px,4.6vw,58px)/1 var(--serif);color:#fff;font-variant-numeric:tabular-nums}
+.dk-stats div:nth-child(2) b{color:var(--gold)}
+.dk-stats span{display:block;font-size:13px;color:#93A0BA;margin-top:10px}
+.dk-vals{display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:34px;font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#C9D5EA}
+.dk-vals span::before{content:"+ ";color:var(--orange)}
+@media (max-width:900px){.dk-grid{grid-template-columns:1fr;gap:16px}.dk-art{max-width:420px}.dk-stats{grid-template-columns:1fr 1fr;row-gap:24px}.dk-stats div:nth-child(3){border-left:0;padding-left:0}}
+@media (max-width:560px){.dk-3{grid-template-columns:1fr}}
+
+/* PRISME */
+.prisme-band{background:var(--navy);color:#fff}
+.prisme-band .lead{color:#C9D5EA}
+.prisme-band .sec-head h2{color:#fff}
+.prisme-band .acr{font:500 14px var(--mono);color:#FFB27D;margin-bottom:8px;letter-spacing:.04em}
+.timeline{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-top:34px;counter-reset:c}
+.step{position:relative;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:16px 14px;min-width:0}
+.step .n{font:800 30px/1 var(--display);color:var(--orange)}
+.step .when{font:500 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:#AFC0DD;margin:10px 0 6px}
+.step h3{font-size:16px;margin-bottom:6px}
+.step p{font-size:13px;color:#C9D5EA}
+.step.now{background:var(--orange);border-color:var(--orange)}
+.step.now .n{color:#fff}.step.now .when,.step.now p{color:#FFE6D5}
+@media (max-width:1050px){.timeline{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:640px){.timeline{grid-template-columns:1fr 1fr}}
+.quote{margin-top:34px;font:700 clamp(20px,2.4vw,26px)/1.3 var(--display);max-width:40ch}
+.quote span{color:var(--orange)}
+
+/* Conférences */
+.filieres{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 26px}
+.fil{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;padding:6px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+.fil i{width:10px;height:10px;border-radius:50%}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin}
+.tab{flex:none;text-align:left;cursor:pointer;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font:600 14px var(--body)}
+.tab small{display:block;font:500 11px var(--mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.tab[aria-selected="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.tab[aria-selected="true"] small{color:#FFB27D}
+.panel{margin-top:14px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.panel h3{font-size:clamp(20px,2.4vw,26px);margin:6px 0 8px}
+.panel .goal{color:var(--muted);max-width:70ch}
+.panel .campus{display:inline-flex;gap:8px;align-items:center;margin-top:12px;font-weight:600;font-size:14px;background:var(--orange-soft);color:var(--hot);padding:6px 12px;border-radius:8px}
+.talks{display:grid;gap:10px;margin-top:20px}
+.talk{display:grid;grid-template-columns:190px 1fr 1fr;gap:16px;padding:14px 0;border-top:1px solid var(--line);align-items:start}
+.talk .f{display:flex;gap:8px;align-items:center;font-weight:700;font-size:14px}
+.talk .f i{width:10px;height:10px;border-radius:50%;flex:none}
+.talk .t{font-weight:600}
+.talk .o{font-size:14px;color:var(--muted)}
+.talk .o::before{content:"Opportunité · ";font:500 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--hot)}
+@media (max-width:820px){.talk{grid-template-columns:1fr;gap:6px}}
+
+/* Équipe */
+.team{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.mem{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px 16px;text-align:center}
+.av{width:76px;height:76px;margin:0 auto 12px;border-radius:50%;display:grid;place-items:center;font:800 24px var(--display);color:#fff;background:var(--navy)}
+.mem:nth-child(even) .av{background:var(--orange)}
+.mem b{display:block;font:700 16px/1.25 var(--display)}
+.mem span{font-size:14px;color:var(--muted)}
+@media (max-width:900px){.team{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.team{grid-template-columns:1fr 1fr}}
+
+/* Partenaires */
+.partners{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pgrp{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.pgrp h3{font-size:17px;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-weight:600;font-size:14px;padding:7px 12px;border-radius:8px;background:var(--navy-soft);color:var(--link)}
+@media (max-width:860px){.partners{grid-template-columns:1fr}}
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.tier{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:grid;gap:10px;align-content:start}
+.tier .amt{font:800 26px/1 var(--display);font-variant-numeric:tabular-nums}
+.tier .amt small{font:500 12px var(--mono);color:var(--muted);margin-left:4px}
+.tier h3{font-size:17px;color:var(--link)}
+.tier ul{margin:0;padding-left:18px;font-size:14px;color:var(--muted);display:grid;gap:4px}
+.tier.top{background:var(--navy);border-color:var(--navy);color:#fff}
+.tier.top h3{color:#FFB27D}.tier.top ul,.tier.top .amt small{color:#C9D5EA}
+@media (max-width:980px){.tiers{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.tiers{grid-template-columns:1fr}}
+
+/* Contribuer */
+.contrib{display:grid;grid-template-columns:1fr 1.2fr;gap:36px;align-items:start}
+.steps3{display:grid;gap:12px;margin-top:22px}
+.s3{display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start}
+.s3 b{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--orange);color:#fff;font:800 16px var(--display)}
+.s3 p{font-size:15px;color:var(--muted)}
+.s3 strong{color:var(--ink)}
+form.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:grid;gap:14px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:grid;gap:6px;font-weight:600;font-size:14px}
+input,select,textarea{font:400 15px var(--body);color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:11px 12px;width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--orange)}
+textarea{min-height:120px;resize:vertical}
+.ok{background:var(--navy-soft);border-radius:12px;padding:16px;display:grid;gap:10px}
+.ok b{font-family:var(--display);font-size:17px}
+.ok .acts{display:flex;gap:8px;flex-wrap:wrap}
+.hint{font-size:13px;color:var(--muted)}
+@media (max-width:860px){.contrib{grid-template-columns:1fr}}
+@media (max-width:520px){.grid2{grid-template-columns:1fr}}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cbox{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;min-width:0}
+.cbox .label{color:var(--hot);margin-bottom:8px;display:block}
+.cbox p{font-weight:600;overflow-wrap:anywhere}
+.cbox p span{display:block;font-weight:400;color:var(--muted);font-size:14px}
+.copy{margin-top:8px;font:600 13px var(--body);background:none;border:0;color:var(--link);cursor:pointer;padding:0;text-decoration:underline}
+@media (max-width:900px){.contact{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.contact{grid-template-columns:1fr}}
+
+/* Contact immersif : prisme flottant, fils de lumière, éclats qui dérivent */
+.ct{position:relative;overflow:hidden;background:#070B16;color:#E8EDF6;padding-block:96px}
+.ct canvas{position:absolute;inset:0;width:100%;height:100%}
+.ct-in{position:relative;z-index:1}
+.ct-form{max-width:520px;display:grid;gap:26px}
+.ct-eye{display:inline-flex;align-items:center;gap:10px;color:#9FB0CD}
+.ct-eye::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--orange)}
+.ct h2{font:600 clamp(26px,3.2vw,38px)/1.18 var(--display);letter-spacing:-.02em;color:#fff}
+.ct form{display:grid;gap:20px}
+.ct-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ct label{color:#9FB0CD;font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.ct input,.ct textarea{background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.22);border-radius:0;color:#fff;padding:10px 0;font:400 16px var(--body);text-transform:none;letter-spacing:0}
+.ct input::placeholder,.ct textarea::placeholder{color:rgba(232,237,246,.35)}
+.ct input:focus,.ct textarea:focus{border-bottom-color:var(--orange)}
+.ct textarea{min-height:90px}
+.ct-btn{justify-self:start;background:#fff;color:#0B1222}
+.ct-btn:hover{background:#FFE3CF}
+.ct #c-wa{justify-self:start}
+.ct-err{font-size:13px;color:#FFB27D}
+.ct-info{display:grid;grid-template-columns:1fr 1fr;gap:18px 24px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12)}
+.ct-info .label{color:#7F8DA8;font-size:11px}
+.ct-info p{font-size:14px;margin-top:4px;color:#E8EDF6;overflow-wrap:anywhere}
+.ct-info a{color:#fff}
+.ct .copy{color:#FFB27D;margin-top:4px}
+.ct-gauge{position:absolute;z-index:1;right:max(16px,env(safe-area-inset-right,0px));top:96px;bottom:96px;display:flex;flex-direction:column;align-items:center;gap:14px;font:500 11px var(--mono);letter-spacing:.1em;color:#7F8DA8;text-transform:uppercase}
+.ct-gauge span{writing-mode:vertical-rl}
+.ct-gauge i{flex:1;width:1px;background:linear-gradient(rgba(255,255,255,.3),rgba(255,255,255,0))}
+.ct-gauge b{font-weight:500;color:#C9D5EA;writing-mode:vertical-rl}
+@media (max-width:860px){.ct{padding-block:72px 300px}.ct-gauge{display:none}}
+@media (max-width:520px){.ct-row,.ct-info{grid-template-columns:1fr}}
+
+/* Impact : titre géant animé, chiffres qui comptent, bandeau partenaires */
+.imp{padding-block:72px 40px;text-align:center;overflow:hidden}
+.imp-big{font:600 clamp(56px,11vw,150px)/.92 var(--display);letter-spacing:-.05em;color:var(--ink);display:grid;justify-items:center}
+.imp-big .ln{display:flex;align-items:center;overflow:hidden;padding:0 .12em .1em}
+.imp-big .up{display:inline-block;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.imp-big .up b{color:var(--orange)}
+.imp-big .ln:nth-child(2) .up{transition-delay:.12s}
+.tiles{display:inline-flex;gap:.06em;transform-origin:left center;transition:transform .8s cubic-bezier(.2,.8,.2,1) .3s,opacity .5s .3s}
+.tiles{gap:clamp(5px,.8vw,10px);margin-left:clamp(6px,1vw,14px)}
+.tiles i{font:500 clamp(9px,1vw,12px)/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;font-style:normal;color:#fff;width:clamp(40px,7.4vw,104px);height:clamp(46px,8.4vw,118px);border-radius:clamp(7px,1vw,12px);display:flex;align-items:flex-end;justify-content:flex-start;padding:clamp(6px,.8vw,10px);background:linear-gradient(150deg,var(--c),color-mix(in srgb,var(--c) 55%,#0E1527));box-shadow:0 10px 24px color-mix(in srgb,var(--c) 30%,transparent)}
+.imp.armed .up{transform:translateY(105%)}
+.imp.armed .tiles{transform:scaleX(0);opacity:0}
+.imp-txt{color:var(--muted);max-width:54ch;margin:26px auto 0;font-size:17px}
+.imp-link{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font:600 13px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--ink);padding-bottom:4px}
+.imp-link svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2.2;transition:transform .2s}
+.imp-link:hover svg{transform:translateX(4px)}
+.imp-stats{display:grid;grid-template-columns:1.2fr repeat(5,1fr);gap:20px;align-items:end;margin-top:64px;text-align:left}
+.imp-stats div{min-width:0}
+.imp-stats b{display:block;font:400 clamp(30px,3.2vw,44px)/1 var(--serif);color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.imp-stats span{display:block;font:500 11px var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.imp-cap{font-size:14px;color:var(--muted);max-width:22ch;text-align:left}
+.logos{margin-top:56px;border-top:1px solid var(--line);padding-top:26px}
+.logos .imp-cap{max-width:var(--max);margin:0 auto 16px}
+.mq{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq-run{display:flex;gap:64px;width:max-content;animation:run 40s linear infinite;align-items:center;padding-block:6px}
+.mq:hover .mq-run{animation-play-state:paused}
+.lg{white-space:nowrap;color:var(--muted);opacity:.85;transition:color .2s,opacity .2s}
+.lg:hover{color:var(--ink);opacity:1}
+.l1{font:800 20px var(--display);letter-spacing:.04em}
+.l2{font:400 26px var(--serif);font-style:italic}
+.l3{font:500 17px var(--mono);letter-spacing:.14em}
+.l4{font:600 17px var(--body);text-transform:uppercase;letter-spacing:.02em}
+.l5{font:700 21px var(--display);letter-spacing:-.03em}
+@media (max-width:900px){.imp-stats{grid-template-columns:repeat(3,1fr)}.imp-stats .imp-cap{grid-column:1/-1;max-width:none}}
+@media (max-width:480px){.imp-stats{grid-template-columns:1fr 1fr}}
+
+/* Le film : la carte vidéo grandit jusqu'au plein écran au défilement */
+.vx{position:relative;height:260vh;background:transparent;margin-top:calc(-50vh + min(42vw,760px) * 9 / 32 - 10px)}
+@media (max-width:700px){.vx{margin-top:calc(-50vh + 82vw * 9 / 32 + 10px)}}
+.vx-stick{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:grid;place-items:center}
+.vx-frame{position:absolute;left:50%;top:50%;width:var(--w,42vw);height:var(--h,24vw);transform:translate(-50%,-50%);border-radius:var(--rad,24px);overflow:hidden;background:#0B1222;box-shadow:0 30px 80px rgba(15,25,50,calc(.25 * var(--o,1)))}
+.vx-frame video{width:100%;height:100%;object-fit:cover;display:block}
+.vx-eye{position:absolute;top:calc(50% - var(--hh,20vh) - 44px);left:0;right:0;text-align:center;color:var(--muted);opacity:var(--o,1);display:flex;justify-content:center;align-items:center;gap:10px;z-index:2}
+.vx-eye span{width:8px;height:8px;border-radius:50%;background:var(--orange)}
+.vx-words{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;padding-inline:max(16px,4vw);pointer-events:none;z-index:2;opacity:var(--o,1)}
+.vx-words span{position:absolute;top:50%;white-space:nowrap;font:600 var(--fs,48px)/1 var(--display);letter-spacing:-.03em;color:var(--ink);transition:none}
+.vx-l{right:calc(50% + var(--w0,400px) / 2 + var(--gap,36px));transform:translate(calc(var(--sp,0) * -40vw),-50%)}
+.vx-r{left:calc(50% + var(--w0,400px) / 2 + var(--gap,36px));transform:translate(calc(var(--sp,0) * 40vw),-50%);font-family:var(--serif)!important;font-style:italic;font-weight:400!important;color:var(--orange)!important}
+.vx-sound{position:absolute;z-index:3;left:max(20px,env(safe-area-inset-left,0px));bottom:calc(24px + env(safe-area-inset-bottom,0px));display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:0;border-radius:999px;background:rgba(10,16,30,.6);color:#fff;font:600 14px var(--body);cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);opacity:var(--so,0);pointer-events:var(--sp-e,none);transition:background .2s}
+.vx-sound:hover{background:rgba(10,16,30,.8)}
+.vx-sound svg{width:18px;height:18px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.vx-sound svg path:first-child{fill:#fff}
+.vx-sound[aria-pressed="false"] .w{opacity:.3}
+.vx-hint{position:absolute;bottom:calc(28px + env(safe-area-inset-bottom,0px));left:0;right:0;text-align:center;color:var(--muted);opacity:var(--o,1);z-index:2}
+@media (max-width:700px){.vx-words{align-items:flex-end;justify-content:center;gap:10px;padding-bottom:22vh}.vx-words span{position:static;transform:none!important;font-size:26px}}
+
+/* À la une — version affinée : cartes douces, icônes, bouton verre */
+#une{background:linear-gradient(180deg,var(--bg),var(--une-bg) 30%,var(--une-bg) 80%,var(--bg))}
+.hero .art{height:270px}
+.hero .meta span{display:inline-flex;align-items:center;gap:7px}
+.hero .meta svg{width:17px;height:17px;flex:none;stroke:#C9D5EA;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.hero .btn-glass{background:linear-gradient(180deg,rgba(255,255,255,.26),rgba(255,255,255,.1));color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 6px 18px rgba(0,0,0,.18)}
+.hero .btn-glass:hover{background:linear-gradient(180deg,rgba(255,255,255,.34),rgba(255,255,255,.16))}
+.side{gap:16px}
+.mini{position:relative;border:0;border-radius:18px;padding:14px;background:var(--card-a);box-shadow:0 1px 2px rgba(15,25,50,.05),0 8px 26px rgba(15,25,50,.07)}
+.mini:hover{border:0;box-shadow:0 2px 4px rgba(15,25,50,.06),0 16px 36px rgba(15,25,50,.12)}
+.mini.warm{background:var(--card-w)}
+.mini{grid-template-columns:112px 1fr}
+.mini .fig{border-radius:14px;gap:4px;align-content:center;font-size:23px;white-space:nowrap}
+.mini .fig svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-inline:auto;display:block}
+.mini .k-a{background:var(--fig-a);color:var(--link)}
+.mini .k-w{background:var(--fig-w);color:var(--fig-w-ink)}
+.mini .corner{position:absolute;top:16px;right:16px;width:24px;height:24px;fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;opacity:.8}
+.mini h3{padding-right:28px}
+.mini .cat{color:var(--link)}
+.mini.warm .cat{color:var(--fig-w-ink)}
+
+/* Style éditorial aéré (inspiré de « Bâtir ensemble ») */
+.ed-head{text-align:center;display:grid;justify-items:center;gap:18px;margin:0 auto 64px;max-width:920px}
+.ed-eye{display:inline-flex;align-items:center;gap:10px;color:var(--muted)}
+.ed-eye::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--orange)}
+.ed-head h2{font:600 clamp(38px,5.8vw,78px)/1 var(--display);letter-spacing:-.045em;color:var(--ink)}
+.ed-head h2 em{font:italic 400 1.06em/1 var(--serif);letter-spacing:-.01em;color:var(--orange)}
+.ed-lead{color:var(--muted);font-size:17px;max-width:54ch}
+.ed-dark h2{color:#fff}.ed-dark h2 em{color:var(--gold)}
+.ed-left{text-align:left;justify-items:start;margin:10px 0 18px}
+.prisme-band .acr,.prisme-band>.wrap>.lead{text-align:center;margin-inline:auto}
+.prisme-band .quote{text-align:center;margin-inline:auto;margin-top:64px}
+/* Rubriques : filets fins au lieu de cartes */
+.rubs{gap:40px}
+.rubcol{gap:0}
+.rubcol h3{font:500 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--ink);padding-bottom:12px;margin-bottom:4px}
+.art-card{background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:20px 0;gap:8px}
+.art-card:hover{border-color:var(--line)}
+.art-card h4{font:600 19px/1.25 var(--display);letter-spacing:-.01em;transition:color .2s}
+.art-card:hover h4{color:var(--hot)}
+/* Frise PRISME */
+.timeline{gap:0;margin-top:56px}
+.step{background:transparent;border:0;border-top:1px solid rgba(255,255,255,.22);border-radius:0;padding:20px 16px 0 0}
+.step .n{font:400 48px/1 var(--serif);color:#fff}
+.step.now{background:transparent;border-top:3px solid var(--orange)}
+.step.now .n{color:var(--orange)}.step.now .when{color:#FFB27D}.step.now p{color:#C9D5EA}
+@media (max-width:640px){.timeline{row-gap:28px}}
+/* Équipe */
+.team{gap:32px 20px}
+.mem{background:transparent;border:0;padding:0}
+.av{width:96px;height:96px;font-size:28px;margin-bottom:16px}
+.mem b{font-size:18px}
+/* Partenaires et paliers */
+.partners{gap:40px}
+.pgrp{background:transparent;border:0;border-top:1px solid var(--ink);border-radius:0;padding:18px 0 0}
+.pgrp h3{font:500 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.chip{background:transparent;color:var(--ink);padding:0;font:600 17px var(--display);border-radius:0}
+.chips{gap:10px 22px}
+.tiers{gap:0;margin-top:48px}
+.tier,.tier.top{background:transparent;border:0;border-top:1px solid var(--line);border-radius:0;padding:24px 24px 0 0;color:var(--ink)}
+.tier.top{border-top:3px solid var(--orange)}
+.tier h3,.tier.top h3{font:500 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.tier .amt{font:400 clamp(44px,4.6vw,60px)/1 var(--serif);letter-spacing:-.01em}
+.tier.top .amt{color:var(--orange)}
+.tier ul,.tier.top ul{color:var(--muted)}
+.tier .amt small,.tier.top .amt small{color:var(--muted)}
+@media (max-width:980px){.tiers{row-gap:32px}}
+
+/* Bâtir ensemble — scène au défilement : parenthèse qui s'ouvre, puis mots qui sortent du flou */
+.imp{padding-block:0 40px;overflow:visible;overflow-x:clip;margin-top:-26vh}
+.scn{position:relative;height:300vh}
+.scn .sc-stick>*{grid-area:1/1}
+.sc-line{opacity:var(--o1,1);transform:translateY(var(--y1,0))}
+.imp-after{margin-top:-10vh;position:relative}
+.sc-stick{position:sticky;top:0;height:100vh;height:100svh;display:grid;place-items:center;overflow:hidden}
+.sc-line{display:flex;align-items:center;justify-content:center;gap:clamp(8px,1.4vw,22px);width:100%}
+.sc-a,.sc-b{font:600 clamp(26px,3.4vw,48px)/1.05 var(--display);letter-spacing:-.035em;color:var(--ink);flex:1 1 0;min-width:0}
+.sc-a{text-align:right}
+.sc-b{text-align:left}
+.sc-b em{font:italic 400 1.06em var(--serif);color:var(--orange)}
+.par{font:200 clamp(40px,4.4vw,64px)/1 var(--display);color:var(--ink);transform:scaleY(var(--ps,1));transition:none;flex:none}
+.pills{width:var(--pw,0px);height:var(--ph,10px);overflow:hidden;flex:none;display:grid;grid-template-columns:repeat(2,auto);justify-content:center;align-content:center;gap:10px 8px}
+.pill{white-space:nowrap;font:500 clamp(12px,1vw,14px)/1 var(--body);color:var(--ink);background:var(--surface);border-radius:999px;padding:9px 14px;box-shadow:0 1px 2px rgba(15,25,50,.06),0 6px 16px rgba(15,25,50,.08);opacity:0;transform:scale(.7);filter:blur(6px)}
+.pill.on{opacity:1;transform:scale(1);filter:blur(0);transition:opacity .35s,transform .45s cubic-bezier(.2,1.4,.4,1),filter .35s}
+.sc2-in{display:grid;justify-items:center;text-align:center;opacity:var(--o2,0);transform:translateY(calc(var(--ty,0px) + var(--y2,0px)))}
+.scn .imp-big{transform:scale(var(--hs,1));transform-origin:center bottom}
+.scn .tiles{transform:scaleX(var(--ts,1));opacity:var(--ts,1);transition:none}
+.scn .imp-txt{font:500 clamp(18px,1.6vw,23px)/1.5 var(--display);color:var(--ink);max-width:40ch;margin-top:30px}
+.scn .imp-txt .w{display:inline-block;opacity:.08;filter:blur(8px);transition:opacity .25s,filter .25s}
+.scn .imp-txt .w.on{opacity:1;filter:blur(0)}
+.scn .imp-link{opacity:var(--lo,1)}
+.imp .imp-stats{margin-top:0}
+@media (max-width:760px){
+  .sc-line{flex-direction:column;gap:14px}
+  .sc-a,.sc-b{text-align:center;flex:none;font-size:28px}
+  .par{display:none}
+  .pills{width:100%!important;height:var(--ph,10px)}
+}
+/* À la une : grande date à la place du prisme */
+.hero .date-art{height:auto;background:transparent;padding:30px 28px 0}
+.da-in{display:grid;gap:8px;border-bottom:1px solid rgba(255,255,255,.16);padding-bottom:24px}
+.da-in .label{color:#FFB27D}
+.da-in b{font:400 clamp(84px,10vw,136px)/.85 var(--serif);color:#fff;letter-spacing:-.02em}
+.da-in .da-y{font:500 13px var(--mono);letter-spacing:.08em;color:#C9D5EA;text-transform:uppercase}
+
+/* Pages : en-tête et pied de page */
+main:not([data-page="accueil"])>section:first-of-type:not(.dk):not(.ct):not(.prisme-band){padding-top:72px}
+main[data-page="contact"] .ct,main[data-page="a-propos"] .dk,main[data-page="programme"] .prisme-band{margin-top:-78px;padding-top:150px}
+.ft{display:grid;grid-template-columns:auto 1fr auto;gap:18px 40px;align-items:center}
+.ft-brand{display:grid;gap:2px}
+.ft-nav{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:center}
+.ft-nav a{color:#C9D5EA;text-decoration:none;font-weight:500}
+.ft-nav a:hover,.ft-nav a.on{color:#fff}
+footer .r{margin-left:0}
+@media (max-width:900px){.ft{grid-template-columns:1fr;justify-items:start}.ft-nav{justify-content:flex-start}}
+
+/* Roue des rubriques : tourne au défilement */
+.wh{position:relative;height:340vh;margin-top:-40px}
+.wh-stick{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.wh-eye{position:absolute;top:calc(84px + env(safe-area-inset-top,0px));left:0;right:0;display:flex;justify-content:center;align-items:center;gap:10px;color:var(--muted);z-index:2}
+.wh-eye span{width:7px;height:7px;border-radius:50%;background:var(--orange)}
+.wh-wheel{position:absolute;left:50%;top:var(--cy,140vh);width:0;height:0;transform:rotate(var(--rot,0deg))}
+.wh-ring{position:absolute;left:calc(var(--R,800px) * -1);top:calc(var(--R,800px) * -1);width:calc(var(--R,800px) * 2);height:calc(var(--R,800px) * 2);overflow:visible}
+.wh-ring circle{stroke:var(--muted);stroke-opacity:.45;stroke-width:14}
+.wi{position:absolute;left:0;top:0;transform:rotate(var(--a,0deg)) translateY(calc(var(--R,800px) * -1 - 40px));transform-origin:0 0;text-decoration:none;color:var(--ink)}
+.wc{position:absolute;bottom:0;left:0;transform:translateX(-50%);width:min(380px,78vw);display:grid;gap:14px;transition:opacity .3s}
+.wn{position:relative;display:flex;align-items:flex-start;line-height:.8}
+.wn b{font:800 clamp(84px,9vw,128px)/.82 var(--display);letter-spacing:-.06em;color:var(--t);-webkit-text-stroke:0}
+.wn i{font:italic 400 18px var(--serif);color:var(--c);margin:10px 0 0 10px;white-space:nowrap}
+.wn b{background:linear-gradient(180deg,var(--c) 0%,var(--t) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.wc h3{font:600 clamp(26px,2.6vw,36px)/1 var(--display);letter-spacing:-.03em}
+.wc ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.wc li{display:flex;gap:10px;align-items:baseline;font-size:15px;color:var(--muted)}
+.wc li::before{content:"";width:7px;height:7px;flex:none;background:var(--c);transform:translateY(-1px)}
+.wi.dim .wc{opacity:.55}
+.wh-dots{position:absolute;bottom:calc(30px + env(safe-area-inset-bottom,0px));left:0;right:0;display:flex;justify-content:center;gap:8px}
+.wh-dots i{width:26px;height:3px;background:var(--line);transition:background .3s}
+.wh-dots i.on{background:var(--orange)}
+
+footer{background:var(--navy);color:#C9D5EA;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;padding-block:26px}
+footer b{color:#fff;font-family:var(--display);font-size:18px}
+footer a{color:#fff}
+footer .r{margin-left:auto}
+
+/* Avatar SYNEO */
+.av-i{display:inline-block;flex:none;border-radius:50%}
+.byline{display:flex;align-items:center;gap:8px;font:500 12px var(--mono);color:var(--muted)}
+.byline{flex-wrap:wrap;row-gap:2px}
+.byline b,.byline span{white-space:nowrap}
+.byline b{font:600 13px var(--body);color:var(--ink)}
+.guide{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:70;display:flex;align-items:flex-end;gap:10px}
+.bubble{position:relative;max-width:240px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:16px 16px 4px 16px;padding:12px 32px 12px 14px;font-size:14px;line-height:1.45;box-shadow:0 10px 30px rgba(10,20,40,.18);animation:pop .4s ease-out .6s both}
+.bubble b{display:block;font-family:var(--display);font-size:15px;margin-bottom:2px}
+.bubble .x{position:absolute;top:6px;right:6px;width:24px;height:24px;border:0;border-radius:50%;background:transparent;color:var(--muted);cursor:pointer;font-size:16px;line-height:1}
+@keyframes pop{from{transform:translateY(8px) scale(.96)}}
+.guide-btn{position:relative;width:64px;height:64px;border-radius:50%;display:block;box-shadow:0 0 0 3px var(--surface),0 8px 24px rgba(0,0,0,.25);transition:transform .15s}
+.guide-btn:hover{transform:scale(1.06)}
+.guide-btn .av-i{width:64px;height:64px}
+.guide-btn .wa-b{position:absolute;right:-2px;bottom:-2px;width:24px;height:24px;border-radius:50%;background:#25D366;border:2px solid var(--surface);display:grid;place-items:center}
+.guide-btn .wa-b svg{width:13px;height:13px;fill:#fff}
+.say{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:center;margin-top:22px}
+.say .av-i{width:64px;height:64px}
+.say p{background:var(--orange-soft);color:var(--ink);border-radius:16px 16px 16px 4px;padding:12px 16px;font-weight:500}
+@media (max-width:560px){.bubble{display:none}}
+</style>
+</head>
+<body>
+<div class="live">
+  <div class="wrap">
+    <span class="dot label">Bientôt</span>
+    <span>Lancement officiel de <b>PRISME</b> · 18 nov. 2026 · ENSPY, Yaoundé</span>
+    <span class="cd" id="cd" aria-live="polite">J-13</span>
+  </div>
+</div>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#accueil"aria-label="SYNEO, retour à l'accueil">
+      <img src="logo.jpg" alt="Logo SYNEO">
+      <div>
+        <div class="name"><span>SYN</span><b>EO</b></div>
+        <small>La Synergie pour le développement</small>
+      </div>
+    </a>
+    <nav class="rub" aria-label="Menu principal">
+      <ul>
+        <li><a href="#actualites">Actualités</a></li>
+        <li><a href="#programme">PRISME</a></li>
+        <li><a href="#a-propos">Qui sommes-nous</a></li>
+        <li><a href="#partenaires">Partenaires</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-n cta" href="#contribuer">Proposer un contenu <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</header>
+<div class="hdr-space" aria-hidden="true"></div>
+
+<main>
+<!-- ACCUEIL -->
+<section id="accueil" class="hx">
+  <canvas class="hx-dots" id="dots" aria-hidden="true"></canvas>
+  <div class="hx-art"><canvas id="pyr" aria-label="Prisme doré en 3D qui tourne, dessiné en points de trame" role="img"></canvas></div>
+  <div class="wrap hx-in">
+    <div class="hx-copy">
+      <h1><span class="l1">Connecter les talents.</span> <span class="l2">Construire le développement.</span></h1>
+      <p>SYNEO forme, informe et met en réseau les porteurs de projets et les jeunes entrepreneurs. Avec PRISME, nous relions universités, entreprises et institutions pour faire émerger les solutions de demain.</p>
+      <div class="actions">
+        <a class="btn btn-n" href="https://wa.me/237657300479?text=Bonjour%20SYNEO%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20la%20conf%C3%A9rence%20inaugurale%20PRISME%20du%2018%20novembre." target="_blank" rel="noopener">S'inscrire au lancement de PRISME</a>
+        <a class="btn btn-g" href="#programme">Découvrir le programme</a>
+      </div>
+    </div>
+    <div class="hx-low">
+      <div class="hx-stats">
+        <div class="hx-stat"><b>18.11</b><span>Lancement de PRISME à l'ENSPY, 11h – 15h</span></div>
+        <div class="hx-stat"><b>6 campus</b><span>Conférences itinérantes en 2027</span></div>
+        <div class="hx-stat"><b>40–60</b><span>Porteurs de projets incubés</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LE FILM : vidéo qui s'agrandit au défilement -->
+<section class="vx" id="film" aria-label="Le film SYNEO">
+  <div class="vx-stick">
+    <p class="vx-eye label"><span></span>Le film SYNEO · 25 s</p>
+    <div class="vx-words" aria-hidden="true"><span class="vx-l">Une lumière,</span><span class="vx-r">cinq filières.</span></div>
+    <div class="vx-frame" id="vxFrame">
+      <video id="vxVideo" src="film.mp4" poster="film-poster.jpg" muted loop playsinline autoplay preload="metadata"></video>
+    </div>
+    <button class="vx-sound" id="vxSound" type="button" aria-pressed="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path class="w" d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/></svg>
+      <span>Activer le son</span>
+    </button>
+    <p class="vx-hint label">Faites défiler</p>
+  </div>
+</section>
+
+<!-- À LA UNE -->
+<section id="une" style="padding-block:48px 40px">
+  <div class="wrap"><div class="ed-head"><span class="label ed-eye">À la une</span><h2>L'essentiel, <em>en un coup d'œil.</em></h2></div></div>
+  <div class="wrap une">
+    <article class="hero">
+      <div class="art date-art"><div class="da-in"><span class="label">Conférence inaugurale</span><b>18.11</b><span class="da-y">2026 · 11h – 15h · ENSPY, Yaoundé</span></div></div>
+      <div class="body">
+        <span class="label tag">À la une · Événement</span>
+        <h2>PRISME : une plateforme nationale pour faire émerger les solutions de demain</h2>
+        <p>Conférences, incubation, série documentaire et Forum National : 13 mois pour connecter les jeunes talents de l'Ingénierie Logicielle et de l'Intelligence Artificielle à tout l'écosystème entrepreneurial camerounais.</p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Date <b>18 novembre 2026, 11h00 – 15h00</b></span>
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Lieu <b>ENSPY, Yaoundé</b></span>
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.6c2.8.2 5 2 5 5"/></svg>Public <b>500 à 1 000 participants</b></span>
+        </div>
+        <div class="actions">
+          <a class="btn btn-glass" href="https://wa.me/237657300479?text=Bonjour%20SYNEO%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20la%20conf%C3%A9rence%20inaugurale%20PRISME%20du%2018%20novembre." target="_blank" rel="noopener">S'inscrire sur WhatsApp</a>
+          <a class="btn btn-g" href="#programme">Découvrir le programme</a>
+        </div>
+      </div>
+    </article>
+    <div class="side">
+      <a class="mini" href="#rubriques">
+        <div class="fig k-a">60 000<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><rect x="10" y="10" width="4" height="4"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg><small>spécialistes IA</small></div>
+        <div><span class="label cat">Opportunités</span><h3>SNIA : le Cameroun vise 60&nbsp;000 spécialistes IA d'ici 2040</h3><p>Dont 40 % de femmes. Ce que la stratégie change pour les jeunes.</p></div>
+      </a>
+      <a class="mini warm" href="#rubriques">
+        <svg class="corner" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        <div class="fig k-w">27,7 %<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg><small>survie à 5 ans</small></div>
+        <div><span class="label cat">Entrepreneuriat</span><h3>Pourquoi 7 entreprises sur 10 ne passent pas le cap des 5 ans</h3><p>Le constat qui a fait naître PRISME (CAMERCAP-PARC).</p></div>
+      </a>
+      <a class="mini warm" href="#rubriques">
+        <svg class="corner" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2M14.5 4.5c3-1.5 5.5-1.5 5.5-1.5s0 2.5-1.5 5.5L12 15l-3-3 5.5-7.5z"/><path d="M9 12l-3-1 3-4 3 1M12 15l1 3 4-3-1-3"/></svg>
+        <div class="fig k-w">207<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2M14.5 4.5c3-1.5 5.5-1.5 5.5-1.5s0 2.5-1.5 5.5L12 15l-3-3 5.5-7.5z"/><circle cx="15.5" cy="8.5" r="1.3"/></svg><small>start-up IA</small></div>
+        <div><span class="label cat">Innovation</span><h3>Start-up IA africaines : 86 % de survie en 2025</h3><p>17 pays, un doublement en trois ans.</p></div>
+      </a>
+      <a class="mini" href="#prisme">
+        <div class="fig k-a">24<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M10 9l5 2.5-5 2.5z"/><path d="M8 21h8"/></svg><small>épisodes</small></div>
+        <div><span class="label cat">Les Bâtisseurs</span><h3>La série documentaire de PRISME arrive sur la CRTV</h3><p>Premier tournage le jour de la conférence inaugurale.</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section class="imp" id="impact">
+  <div class="scn"><div class="sc-stick"><div class="wrap sc-line">
+    <p class="sc-a">Trop de questions<br>qui dispersent</p>
+    <span class="par" aria-hidden="true">(</span>
+    <div class="pills" aria-label="Questions des porteurs de projet"><span class="pill">Où trouver un mentor ?</span><span class="pill">Comment financer mon projet ?</span><span class="pill">Qui peut me former à l'IA ?</span><span class="pill">Avec qui m'associer ?</span><span class="pill">Quel marché viser ?</span><span class="pill">Mon idée est-elle viable ?</span><span class="pill">Quel statut juridique ?</span><span class="pill">Où rencontrer des investisseurs ?</span><span class="pill">Comment structurer mon équipe ?</span><span class="pill">Comment tenir 5 ans ?</span></div>
+    <span class="par" aria-hidden="true">)</span>
+    <p class="sc-b">les jeunes porteurs<br><em>de projet.</em></p>
+  </div>
+  <div class="wrap sc2-in">
+    <h2 class="imp-big" aria-label="Bâtir ensemble.">
+      <span class="ln"><span class="up">Bâtir</span><span class="tiles" aria-hidden="true"><i style="--c:#F2701E">IA</i><i style="--c:#2E9C8A">Cyber</i><i style="--c:#3D78C9">Data</i></span></span>
+      <span class="ln"><span class="up">ensemble<b>.</b></span></span>
+    </h2>
+    <p class="imp-txt">SYNEO relie les talents, les écoles, les entreprises et les institutions. Chaque filière est une spécialisation. Chaque conférence est une étape. Ensemble, elles forment une chaîne de valeur entrepreneuriale.</p>
+    <a class="imp-link" href="#conferences">Voir les conférences <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div></div></div>
+  <div class="wrap imp-after">
+    <div class="imp-stats">
+      <p class="imp-cap">Ce que PRISME met en mouvement.</p>
+      <div><b data-count="30">30</b><span>Présentations</span></div>
+      <div><b data-count="6">6</b><span>Campus hôtes</span></div>
+      <div><b data-count="24">24</b><span>Épisodes documentaires</span></div>
+      <div><b data-count="60" data-pre="40–">40–60</b><span>Projets incubés</span></div>
+      <div><b data-count="13" data-suf=" mois">13 mois</b><span>De programme</span></div>
+    </div>
+  </div>
+  <div class="logos">
+    <p class="wrap imp-cap">Ils construisent PRISME avec nous</p>
+    <div class="mq"><div class="mq-run">
+      <span class="lg l1">MINPOSTEL</span><span class="lg l2">ENSPY</span><span class="lg l3">ESSTIC</span><span class="lg l4">Chaire UNESCO Accès TIC</span><span class="lg l2">AgroPole</span><span class="lg l5">Néo Industry</span><span class="lg l1">Bass Technology</span><span class="lg l3">IAC</span><span class="lg l4">MY LAB Production</span><span class="lg l5">CAMIGRA</span><span class="lg l2">TIIANA</span><span class="lg l3">MINESUP</span>
+    </div></div>
+  </div>
+</section>
+
+<div class="flash" id="flash" aria-label="Flash info">
+  <div class="wrap">
+    <span class="label">Flash</span>
+    <div class="track"><div class="run" id="run">
+      <span>Inscriptions ouvertes pour la conférence inaugurale du 18 novembre</span>
+      <span>Conférences thématiques itinérantes : 6 campus de janvier à juin 2027</span>
+      <span>Appel à sponsors : 4 niveaux de partenariat disponibles</span>
+      <span>Série documentaire « PRISME : Les Bâtisseurs » : 24 épisodes sur CRTV</span>
+      <span>Cohorte d'incubation : 40 à 60 porteurs de projets dès juillet 2027</span>
+    </div></div>
+  </div>
+</div>
+
+<!-- ROUE DES RUBRIQUES (page Actualités) -->
+<section class="wh" id="roue" aria-label="Les 4 rubriques de SYNEO">
+  <div class="wh-stick">
+    <div class="wh-wheel" id="whWheel">
+      <svg class="wh-ring" aria-hidden="true"><circle id="whCircle" fill="none"/></svg>
+      <a class="wi" href="#rubriques" style="--c:#F2701E;--t:#FCD9C2"><div class="wc"><div class="wn"><b>01</b><i>SYNEO</i></div><h3>Entrepreneuriat</h3><ul><li>Modèles d'affaires et proposition de valeur</li><li>Structurer et faire grandir son équipe</li><li>Retours d'expérience de fondateurs</li></ul></div></a>
+      <a class="wi" href="#rubriques" style="--c:#3D78C9;--t:#CFE0F7"><div class="wc"><div class="wn"><b>02</b><i>À suivre</i></div><h3>Innovation</h3><ul><li>Tropicaliser la technologie</li><li>IA, données et cybersécurité appliquées</li><li>Cas d'usage camerounais</li></ul></div></a>
+      <a class="wi" href="#rubriques" style="--c:#D9940F;--t:#FBE7B8"><div class="wc"><div class="wn"><b>03</b><i>À suivre</i></div><h3>Opportunités</h3><ul><li>Appels à projets et concours</li><li>Financements et exonérations</li><li>Formation et incubation PRISME</li></ul></div></a>
+      <a class="wi" href="#rubriques" style="--c:#2E9C8A;--t:#C8EDE5"><div class="wc"><div class="wn"><b>04</b><i>À suivre</i></div><h3>Les Bâtisseurs</h3><ul><li>Portraits de jeunes entrepreneurs</li><li>Coulisses de la série documentaire</li><li>Votre histoire, publiée après vérification</li></ul></div></a>
+    </div>
+    <div class="wh-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  </div>
+</section>
+
+<!-- RUBRIQUES -->
+<section id="rubriques">
+  <div class="wrap">
+    <div class="ed-head"><span class="label ed-eye">Actualités</span><h2>Chaque sujet <em>a sa place.</em></h2><p class="ed-lead">Quatre rubriques claires. Rien ne se mélange.</p></div>
+    <div class="rubs">
+      <div class="rubcol">
+        <h3>Entrepreneuriat <span>›</span></h3>
+        <a class="art-card" href="#"><span class="d">04 nov. 2026</span><h4>Construire son modèle d'affaires : de l'idée à la proposition de valeur</h4><p>Les bases du canevas pour porteurs de projet.</p></a>
+        <a class="art-card" href="#"><span class="d">28 oct. 2026</span><h4>Spécialisation et coopération : trouver sa place dans la chaîne de valeur</h4></a>
+      </div>
+      <div class="rubcol">
+        <h3>Innovation <span>›</span></h3>
+        <a class="art-card" href="#"><span class="d">02 nov. 2026</span><h4>Tropicaliser la technologie : concevoir pour le contexte camerounais</h4><p>Passer de consommateur à concepteur de solutions.</p></a>
+        <a class="art-card" href="#"><span class="d">25 oct. 2026</span><h4>IA appliquée : agriculture de précision et santé au Cameroun</h4></a>
+      </div>
+      <div class="rubcol">
+        <h3>Opportunités <span>›</span></h3>
+        <a class="art-card" href="#"><span class="d">03 nov. 2026</span><h4>Exonérations de 5 ans pour les jeunes entreprises fintech, agritech et etech</h4><p>Qui est éligible et comment en profiter.</p></a>
+        <a class="art-card" href="#"><span class="d">20 oct. 2026</span><h4>Panorama des mécanismes de financement de l'écosystème camerounais</h4></a>
+      </div>
+      <div class="rubcol">
+        <h3>Les Bâtisseurs <span>›</span></h3>
+        <a class="art-card" href="#"><span class="d">Bientôt</span><h4>Série documentaire : portraits de jeunes entrepreneurs du numérique</h4><p>Premier tournage le jour de la conférence inaugurale.</p></a>
+        <a class="art-card" href="#contribuer"><span class="d">Votre histoire</span><h4>Vous êtes entrepreneur ? Proposez votre portrait à la rédaction</h4></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRISME -->
+<section id="prisme" class="prisme-band">
+  <div class="wrap">
+    <p class="acr">Programme de Réseautage et d'Innovation pour la Synergie des Modèles Entrepreneuriaux</p>
+    <div class="ed-head ed-dark" style="margin-bottom:18px"><h2>Le programme <em>PRISME.</em></h2></div>
+    <p class="lead">Première édition consacrée à l'Ingénierie Logicielle et à l'Intelligence Artificielle, alignée sur la Stratégie Nationale d'Intelligence Artificielle. Sept composantes cumulatives, de novembre 2026 à décembre 2027.</p>
+    <div class="timeline">
+      <div class="step now"><div class="n">1</div><div class="when">18 nov. 2026</div><h3>Conférence inaugurale</h3><p>Lancement officiel à l'ENSPY.</p></div>
+      <div class="step"><div class="n">2</div><div class="when">Janv. – juin 2027</div><h3>Conférences thématiques</h3><p>6 rencontres sur 6 campus.</p></div>
+      <div class="step"><div class="n">3</div><div class="when">Juil. – nov. 2027</div><h3>Formation & incubation</h3><p>Cohorte de 40 à 60 projets.</p></div>
+      <div class="step"><div class="n">4</div><div class="when">Toute l'année 2027</div><h3>Série documentaire</h3><p>« Les Bâtisseurs », 24 épisodes.</p></div>
+      <div class="step"><div class="n">5</div><div class="when">En continu</div><h3>Magazines audiovisuels</h3><p>Portraits d'entreprises.</p></div>
+      <div class="step"><div class="n">6</div><div class="when">Fin 2027</div><h3>Film de clôture</h3><p>Talents et résultats.</p></div>
+      <div class="step"><div class="n">7</div><div class="when">Déc. 2027</div><h3>Forum National</h3><p>Salon, B2B, partenariats.</p></div>
+    </div>
+    <p class="quote rw">Seuls, nous créons des entreprises. <span>Ensemble, nous bâtissons des écosystèmes.</span></p>
+  </div>
+</section>
+
+<!-- CONFÉRENCES -->
+<section id="conferences">
+  <div class="wrap">
+    <div class="ed-head" style="margin-bottom:28px"><span class="label ed-eye">Conférences thématiques</span><h2>Six campus, <em>six étapes.</em></h2><p class="ed-lead">5 filières × 6 étapes = 30 présentations, de janvier à juin 2027.</p></div>
+    <div class="filieres" id="fils"></div>
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div class="panel" role="tabpanel" id="panel"></div>
+  </div>
+</section>
+
+<!-- QUI SOMMES-NOUS -->
+<section id="apropos" class="dk">
+  <div class="wrap">
+    <div class="dk-grid">
+      <div class="dk-art">
+        <span class="label eyebrow">Qui sommes-nous</span>
+        <svg viewBox="0 0 420 360" aria-hidden="true" fill="none">
+          <g stroke="rgba(255,255,255,.08)"><line x1="210" y1="0" x2="210" y2="360"/><line x1="0" y1="180" x2="420" y2="180"/></g>
+          <circle cx="210" cy="190" r="140" stroke="rgba(255,255,255,.28)"/>
+          <path d="M210 62 L332 260 L88 260 Z" stroke="rgba(255,255,255,.55)"/>
+          <line x1="0" y1="214" x2="152" y2="196" stroke="#fff" stroke-opacity=".8" stroke-width="1.5"/>
+          <g stroke-width="1.5" stroke-opacity=".85">
+            <line x1="268" y1="190" x2="420" y2="150" stroke="#F2701E"/>
+            <line x1="268" y1="190" x2="420" y2="172" stroke="#E2A21B"/>
+            <line x1="268" y1="190" x2="420" y2="194" stroke="#2E9C8A"/>
+            <line x1="268" y1="190" x2="420" y2="216" stroke="#3D78C9"/>
+            <line x1="268" y1="190" x2="420" y2="238" stroke="#7B5BC2"/>
+          </g>
+          <circle cx="210" cy="50" r="5" fill="#F2701E"/>
+        </svg>
+      </div>
+      <div>
+        <div class="signed"><span class="faces"><i>RA</i><i>JB</i><i>BK</i></span><div><b>Signé, l'équipe fondatrice</b><small>10 membres · Yaoundé, Biteng</small></div></div>
+        <p class="manif rw">Les formations, les incubateurs et les financements se multiplient, mais chacun avance seul. Nous avons créé SYNEO pour <em>les relier</em> : orienter chaque porteur de projet, l'aider à se spécialiser, puis le connecter à ceux qui le complètent.</p>
+        <div class="dk-3">
+          <div><span class="n">01 —</span><h3>Orientation</h3><p>Choisir une direction claire avant de se lancer.</p></div>
+          <div><span class="n">02 —</span><h3>Spécialisation</h3><p>Exceller sur un maillon de la chaîne de valeur.</p></div>
+          <div><span class="n">03 —</span><h3>Complémentarité</h3><p>Se relier aux spécialistes qui nous complètent.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="dk-stats">
+      <div><b>2026</b><span>Création de SYNEO, le 12 juillet</span></div>
+      <div><b>30</b><span>Présentations sur 6 campus</span></div>
+      <div><b>24</b><span>Épisodes de « Les Bâtisseurs »</span></div>
+      <div><b>13 mois</b><span>De programme, jusqu'au Forum National</span></div>
+    </div>
+    <div class="dk-vals"><span>Synergie</span><span>Coopération</span><span>Coconstruction</span><span>Transmission</span></div>
+  </div>
+</section>
+<!-- ÉQUIPE -->
+<section id="equipe">
+  <div class="wrap">
+    <div class="ed-head"><span class="label ed-eye">L'équipe</span><h2>Ceux qui <em>portent SYNEO.</em></h2></div>
+    <div class="team">
+      <div class="mem"><div class="av">RA</div><b>Romuald AYOGO</b><span>Président fondateur</span></div>
+      <div class="mem"><div class="av">MB</div><b>Megane BILEGUE OLEME</b><span>Censeur</span></div>
+      <div class="mem"><div class="av">CE</div><b>Carel ENAMA</b><span>Trésorier</span></div>
+      <div class="mem"><div class="av">JB</div><b>Jérôme BELOBO</b><span>Secrétaire Général</span></div>
+      <div class="mem"><div class="av">BK</div><b>Boris KOUEKAM</b><span>Membre</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTENAIRES -->
+<section id="partenaires" style="background:var(--surface);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="ed-head"><span class="label ed-eye">Partenaires</span><h2>Ils sont déjà <em>à nos côtés.</em></h2></div>
+    <div class="partners">
+      <div class="pgrp"><h3>Institutionnels</h3><div class="chips"><span class="chip">MINPOSTEL</span><span class="chip">Ministère de l'Enseignement Supérieur</span><span class="chip">ESSTIC</span><span class="chip">ENSPY</span></div></div>
+      <div class="pgrp"><h3>Techniques</h3><div class="chips"><span class="chip">Chaire UNESCO Accès TIC</span><span class="chip">Programme AgroPole</span><span class="chip">Néo Industry</span><span class="chip">Bass Technology</span><span class="chip">IAC</span></div></div>
+      <div class="pgrp"><h3>Production</h3><div class="chips"><span class="chip">MY LAB Production</span><span class="chip">CAMIGRA</span><span class="chip">TIIANA</span></div></div>
+    </div>
+    <div class="ed-head" style="margin:104px auto 0"><span class="label ed-eye">Devenir partenaire</span><h2>Une visibilité <em>toute la saison.</em></h2><p class="ed-lead">Renouvelée chaque mois, sur six campus, de novembre 2026 à décembre 2027.</p></div>
+    <div class="tiers">
+      <div class="tier"><h3>Partenaire Réseau</h3><div class="amt">5 M<small>FCFA</small></div><ul><li>Logo sur tous les supports</li><li>Présence réseaux sociaux</li><li>Générique de fin de la série</li><li>Capsule exclusive + invitations VIP</li></ul></div>
+      <div class="tier"><h3>Partenaire Synergie</h3><div class="amt">10 M<small>FCFA</small></div><ul><li>Avantages Réseau</li><li>Stand à 2 conférences + Forum</li><li>Apparition dans un épisode</li></ul></div>
+      <div class="tier"><h3>Partenaire Innovation</h3><div class="amt">20 M<small>FCFA</small></div><ul><li>Avantages Synergie</li><li>Prise de parole en conférence</li><li>Parrainage nommé d'un épisode</li><li>Priorité sur les talents incubés</li></ul></div>
+      <div class="tier top"><h3>Partenaire Écosystème</h3><div class="amt">30 M +<small>FCFA</small></div><ul><li>Avantages Innovation</li><li>Générique d'ouverture de la saison</li><li>Parrainage d'un axe stratégique</li><li>Partenaire fondateur du film de clôture</li></ul></div>
+    </div>
+    <p style="margin-top:22px"><a class="btn btn-n" href="#contact">Recevoir le dossier de sponsoring</a></p>
+  </div>
+</section>
+
+<!-- CONTRIBUER -->
+<section id="contribuer">
+  <div class="wrap contrib">
+    <div>
+      <span class="label cat">Espace contributeurs</span>
+      <div class="ed-head ed-left"><h2>Publiez <em>sur SYNEO.</em></h2></div>
+      <p class="lead">Entrepreneur, étudiant, mentor : partagez une actualité, une opportunité ou votre parcours. Chaque contenu est relu par l'équipe avant publication.</p>
+      <div class="steps3">
+        <div class="s3"><b>1</b><p><strong>Vous proposez</strong> un sujet dans la bonne rubrique.</p></div>
+        <div class="s3"><b>2</b><p><strong>L'équipe vérifie</strong> les faits et la forme.</p></div>
+        <div class="s3"><b>3</b><p><strong>Le contenu est publié</strong> avec votre nom.</p></div>
+      </div>
+      <div class="say"><svg class="av-i" viewBox="0 0 200 200" aria-hidden="true"><use href="#av"/></svg><p>Ton histoire peut inspirer d'autres jeunes. Je la relis avec l'équipe et on la publie ensemble.</p></div>
+    </div>
+    <form class="card" id="form" novalidate>
+      <div class="grid2">
+        <label for="f-nom">Nom complet<input id="f-nom" required placeholder="Ex. Aïcha Mbarga"></label>
+        <label for="f-tel">Téléphone / WhatsApp<input id="f-tel" required inputmode="tel" placeholder="6XX XXX XXX"></label>
+      </div>
+      <label for="f-rub">Rubrique
+        <select id="f-rub"><option>Entrepreneuriat</option><option>Innovation</option><option>Opportunités</option><option>Les Bâtisseurs (portrait)</option></select>
+      </label>
+      <label for="f-titre">Titre<input id="f-titre" required placeholder="Ex. Comment nous avons lancé notre agritech à Bafoussam"></label>
+      <label for="f-txt">Votre contenu<textarea id="f-txt" required placeholder="Quelques lignes suffisent. Vous pourrez envoyer photos et documents ensuite."></textarea></label>
+      <p class="hint" id="f-err" hidden>Remplissez le nom, le téléphone, le titre et le contenu.</p>
+      <button class="btn btn-o" type="submit">Soumettre pour vérification</button>
+      <div class="ok" id="f-ok" hidden>
+        <b>Proposition prête.</b>
+        <p class="hint">Envoyez-la à l'équipe sur WhatsApp pour qu'elle soit relue.</p>
+        <div class="acts"><a class="btn btn-o" id="f-wa" target="_blank" rel="noopener" href="#">Envoyer sur WhatsApp</a><button class="btn btn-g" type="button" id="f-copy">Copier le texte</button></div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="ct">
+  <canvas id="sea" aria-hidden="true"></canvas>
+  <div class="wrap ct-in">
+    <div class="ct-form">
+      <span class="label ct-eye">Contact</span>
+      <h2>Un projet, une idée, un partenariat ?<br>Parlons-en.</h2>
+      <form id="cform" novalidate>
+        <div class="ct-row">
+          <label for="c-nom">Nom<input id="c-nom" placeholder="Votre nom"></label>
+          <label for="c-tel">Téléphone / WhatsApp<input id="c-tel" inputmode="tel" placeholder="6XX XXX XXX"></label>
+        </div>
+        <label for="c-msg">Votre message<textarea id="c-msg" placeholder="Dites-nous en quelques mots ce que vous cherchez."></textarea></label>
+        <p class="ct-err" id="c-err" hidden>Écrivez au moins votre nom et votre message.</p>
+        <button class="btn ct-btn" type="submit">Préparer le message</button>
+        <a class="btn btn-o" id="c-wa" href="#" target="_blank" rel="noopener" hidden>Envoyer sur WhatsApp</a>
+      </form>
+      <div class="ct-info">
+        <div><span class="label">Adresse</span><p>Yaoundé, Biteng — entrée Express Union</p></div>
+        <div><span class="label">Téléphone</span><p>(+237) 657 300 479 · 653 008 768</p><button class="copy" data-copy="+237657300479">Copier</button></div>
+        <div><span class="label">E-mail</span><p>syneo3123@gmail.com</p><button class="copy" data-copy="syneo3123@gmail.com">Copier</button></div>
+        <div><span class="label">Réseaux</span><p><a href="https://www.facebook.com/share/1EkRE3H2WD/" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/syneo3123" target="_blank" rel="noopener">Instagram</a></p></div>
+      </div>
+    </div>
+  </div>
+  <div class="ct-gauge" aria-hidden="true"><span>3°52′ N · 11°31′ E</span><i></i><b>Yaoundé</b></div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap ft">
+    <div class="ft-brand"><b>SYNEO</b><span>La Synergie pour le développement</span></div>
+    <nav class="ft-nav" aria-label="Pages du site"><a href="#accueil">Accueil</a><a href="#actualites">Actualités</a><a href="#programme">PRISME</a><a href="#a-propos">Qui sommes-nous</a><a href="#partenaires">Partenaires</a><a href="#contribuer">Contribuer</a><a href="#contact">Contact</a></nav>
+    <span class="r">© 2026 SYNEO · Yaoundé, Cameroun</span>
+  </div>
+</footer>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs><linearGradient id="avg" gradientUnits="userSpaceOnUse" x1="0" y1="25" x2="0" y2="182"><stop offset="0" stop-color="#F98E2A"/><stop offset="1" stop-color="#EC5414"/></linearGradient></defs>
+  <symbol id="av" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="100" fill="#1B3B6E"/>
+    <g fill="url(#avg)" stroke="url(#avg)" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="103" cy="40" r="16" stroke="none"/>
+      <path d="M88 62 h30 a11 11 0 0 1 11 11 v57 h-52 v-57 a11 11 0 0 1 11-11z" stroke="none"/>
+      <line x1="94" y1="126" x2="93" y2="176" stroke-width="17"/>
+      <line x1="113" y1="126" x2="115" y2="176" stroke-width="17"/>
+      <line x1="125" y1="74" x2="134" y2="128" stroke-width="11"/>
+      <line x1="81" y1="74" x2="60" y2="116" stroke-width="11"/>
+    </g>
+  </symbol>
+</svg>
+
+<div class="guide" id="guide">
+  <div class="bubble" id="bubble"><button class="x" id="bx" type="button" aria-label="Fermer le message">×</button><b>Salut 👋</b>Une question sur PRISME ou SYNEO ? Écris-moi sur WhatsApp.</div>
+  <a class="guide-btn" href="https://wa.me/237657300479" target="_blank" rel="noopener" aria-label="Écrire à SYNEO sur WhatsApp"><svg class="av-i" viewBox="0 0 200 200"><use href="#av"/></svg><span class="wa-b"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg></span></a>
+</div>
+
+<script>
+/* Compte à rebours : 18 nov. 2026 11h00 heure de Yaoundé (UTC+1) */
+(function(){
+  const t=Date.UTC(2026,10,18,10,0,0), el=document.getElementById('cd');
+  function tick(){
+    let d=t-Date.now();
+    if(d<=0){el.textContent='En cours / terminé';return}
+    const j=Math.floor(d/864e5), h=Math.floor(d%864e5/36e5), m=Math.floor(d%36e5/6e4);
+    el.textContent='J-'+j+' · '+String(h).padStart(2,'0')+'h '+String(m).padStart(2,'0')+'min';
+  }
+  tick(); setInterval(tick,30000);
+  const run=document.getElementById('run'); run.innerHTML+=run.innerHTML;
+})();
+
+/* Conférences */
+const F=[
+  {k:'IA',n:'Intelligence Artificielle',c:'var(--f1)'},
+  {k:'SP',n:'Ingénierie Spatiale',c:'var(--f2)'},
+  {k:'CY',n:'Cryptomonnaies & Cybersécurité',c:'var(--f3)'},
+  {k:'DA',n:'Gestion des Données Numériques',c:'var(--f4)'},
+  {k:'EC',n:'Écosystème Entrepreneurial',c:'var(--f5)'}
+];
+const C=[
+ {e:'Compréhension',t:"Technologies de Rupture : Cartographie des Opportunités pour l'Écosystème Camerounais",g:"Poser les fondamentaux et le vocabulaire commun de chaque filière : comprendre avant de bâtir.",cp:"ENSPY — École Nationale Supérieure Polytechnique de Yaoundé",
+  p:[["Intelligence Artificielle : Fondements, Promesses et Limites pour les Économies Émergentes","Diagnostic et audit de maturité IA pour les entreprises locales."],["Technologies Spatiales et Géospatiales : de l'Observation Satellite à la Donnée Terrain","Vulgarisation cartographique pour collectivités locales."],["Cryptomonnaies et Cybersécurité : Principes, Réglementation et Culture du Risque en Zone CEMAC","Conseil réglementaire et sensibilisation cybersécurité pour PME et administrations."],["Gestion des Données Numériques : Collecte, Conservation et Valorisation à l'Ère Digitale","Audit documentaire et maturité data des organisations."],["Écosystème Entrepreneurial : Logiques de Spécialisation et de Coopération entre Acteurs","Diagnostic de positionnement dans la chaîne de valeur."]]},
+ {e:'Construction',t:"Ingénierie des Solutions Technologiques : du Concept au Prototype",g:"Comment on conçoit, développe et architecture une solution dans chaque filière.",cp:"Université de Yaoundé I — Département d'Informatique",
+  p:[["Ingénierie des Modèles d'IA : Construire des Systèmes Adaptés aux Données Locales","Studios de développement IA sur mesure."],["Conception de Solutions Géospatiales : Images Satellite et SIG","Bureaux d'étude cartographiques pour l'urbanisme et l'agriculture."],["Infrastructures Numériques Sécurisées : Smart Contracts et Sécurité par Conception","Contrats intelligents pour la traçabilité agricole ou les paiements."],["Ingénierie des Systèmes de Gestion des Données : Infrastructures Pérennes","Coffres-forts numériques pour notaires, banques, administrations."],["Construire son Modèle d'Affaires : de l'Idée à la Proposition de Valeur","Accompagnement à la structuration du business model."]]},
+ {e:'Application',t:"Technologies en Action : Cas d'Usage et Déploiements Terrain au Cameroun",g:"Les technologies déployées dans des contextes réels et sectoriels camerounais.",cp:"SUP'PTIC — Postes, Télécommunications et TIC",
+  p:[["IA Appliquée : Agriculture de Précision, Santé et Services Publics","Solutions IA packagées pour coopératives et centres de santé."],["Applications Géospatiales : Foncier, Catastrophes et Agriculture","Services cartographiques pour litiges fonciers et assurance agricole."],["Cryptomonnaies et Cybersécurité en Pratique : Traçabilité et Infrastructures Critiques","Traçabilité cacao/café pour l'export ; réponse à incident pour PME."],["Données en Pratique : Dématérialisation, Preuve Juridique et Valorisation","Dématérialisation pour tribunaux, mairies, entreprises."],["Écosystèmes en Action : Collaborations Réussies au Cameroun","Courtage de partenariats intersectoriels."]]},
+ {e:'Production',t:"De la Preuve de Concept à l'Échelle : Industrialiser les Solutions",g:"Passage à l'échelle, qualité et robustesse : du prototype au produit.",cp:"IAI-Cameroun — Centre d'Excellence Technologique Paul BIYA",
+  p:[["Industrialisation de l'IA : MLOps, Qualité des Données et Passage à l'Échelle","Maintenance et supervision de modèles en production."],["Industrialisation des Services Géospatiaux à Grande Échelle","Cartographie automatisée pour l'État et l'agro-industrie."],["Industrialiser la Confiance : Scalabilité Blockchain et SOC","Paiements blockchain à bas coût ; SOC mutualisés pour PME."],["Plateformes de Données à Grande Échelle : Standards et Certification","Hébergement certifié pour grands groupes et administrations."],["Structurer une Organisation pour Passer à l'Échelle","Conseil organisationnel pour startups en croissance."]]},
+ {e:'Modèles économiques',t:"Monétiser l'Innovation : Modèles Économiques et Stratégies de Marché",g:"La question du modèle économique et du positionnement commercial de chaque filière.",cp:"ESSTIC — Sciences et Techniques de l'Information et de la Communication",
+  p:[["Modèles Économiques de l'IA : de la Licence au Service Prédictif à la Demande","Facturation à l'usage pour PME."],["Monétiser la Donnée Spatiale : Abonnements, Licences et Services","Bulletins cartographiques pour assureurs et agro-industriels."],["Monétiser la Confiance : Tokenisation, Abonnements et Assurance Cyber","Tokens communautaires ; assurance cyber packagée."],["La Conformité et la Donnée comme Services","Contrats récurrents de conformité documentaire."],["Financer la Croissance : Mécanismes de Financement au Cameroun","Levée de fonds et mise en relation investisseurs."]]},
+ {e:'Entrepreneuriat',t:"L'Écosystème comme Chaîne de Création de Valeur : Spécialisation et Collaboration",g:"Comment chaque filière devient une entreprise viable, insérée dans un écosystème interdépendant.",cp:"NUMIATECH — clôture du cycle itinérant",
+  p:[["De la Startup IA à l'Entreprise Pérenne : Lever des Fonds et Bâtir une Équipe","Structuration juridique et levée de fonds."],["Entrepreneuriat Spatial : Partenariats Institutionnels et Marchés Publics","Appels d'offres publics (cadastre, cartographie nationale)."],["Entreprendre dans la Crypto et la Cybersécurité : Cadre, Investisseurs, Confiance","Accompagnement réglementaire CEMAC ; certification internationale."],["Entreprendre dans les Données : Contrats Publics et Confiance comme Actif","Contrats-cadres de dématérialisation avec l'administration."],["La Chaîne de Valeur Inter-Filières","Consortiums inter-filières pour grands appels à projets."]]}
+];
+const months=['Janv.','Févr.','Mars','Avril','Mai','Juin'];
+document.getElementById('fils').innerHTML=F.map(f=>`<span class="fil"><i style="background:${f.c}"></i>${f.n}</span>`).join('');
+const tabs=document.getElementById('tabs'), panel=document.getElementById('panel');
+tabs.innerHTML=C.map((c,i)=>`<button class="tab" role="tab" id="tab-${i}" aria-selected="${i===0}"><small>${months[i]} 2027 · Étape ${i+1}</small>${c.e}</button>`).join('');
+function show(i){
+  const c=C[i];
+  tabs.querySelectorAll('.tab').forEach((b,j)=>b.setAttribute('aria-selected',j===i));
+  panel.innerHTML=`<span class="label cat">Conférence ${i+1} / 6 · ${c.e}</span><h3>${c.t}</h3><p class="goal">${c.g}</p><span class="campus">Campus hôte suggéré · ${c.cp}</span>
+  <div class="talks">${c.p.map((p,j)=>`<div class="talk"><div class="f"><i style="background:${F[j].c}"></i>${F[j].n}</div><div class="t">${p[0]}</div><div class="o">${p[1]}</div></div>`).join('')}</div>`;
+}
+tabs.addEventListener('click',e=>{const b=e.target.closest('.tab'); if(b) show(+b.id.split('-')[1])});
+show(0);
+
+/* Signature « Rédaction SYNEO » avec l'avatar sur chaque article */
+document.querySelectorAll('.art-card .d').forEach(d=>{
+  const by=document.createElement('span'); by.className='byline';
+  by.innerHTML='<svg class="av-i" width="22" height="22" viewBox="0 0 200 200" aria-hidden="true"><use href="#av"/></svg><b>Rédaction SYNEO</b><span>· '+d.textContent+'</span>';
+  d.replaceWith(by);
+});
+document.getElementById('bx').addEventListener('click',()=>{document.getElementById('bubble').hidden=true});
+
+/* Texte qui s'allume mot par mot au défilement */
+(function(){
+  const els=[...document.querySelectorAll('.rw')];
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!els.length) return;
+  const data=els.map(el=>{
+    const walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT), nodes=[];
+    while(walk.nextNode()) nodes.push(walk.currentNode);
+    nodes.forEach(n=>{
+      const frag=document.createDocumentFragment();
+      n.textContent.split(/(\s+)/).forEach(part=>{
+        if(!part) return;
+        if(/^\s+$/.test(part)) frag.appendChild(document.createTextNode(part));
+        else{const sp=document.createElement('span');sp.className='w';sp.textContent=part;frag.appendChild(sp)}
+      });
+      n.replaceWith(frag);
+    });
+    return {el,words:[...el.querySelectorAll('.w')]};
+  });
+  let ticking=false;
+  function update(){
+    ticking=false; const vh=innerHeight;
+    data.forEach(({el,words})=>{
+      const r=el.getBoundingClientRect(), start=vh*.88, end=vh*.38;
+      const p=Math.max(0,Math.min(1,(start-r.top)/(start-end+r.height*.5)));
+      const f=p*(words.length+2);
+      words.forEach((w,i)=>{w.style.opacity=(.2+.8*Math.max(0,Math.min(1,f-i))).toFixed(2)});
+    });
+  }
+  addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(update)}},{passive:true});
+  addEventListener('resize',update); update();
+})();
+
+/* Barre de navigation : devient une pilule flottante au défilement */
+(function(){const hd=document.querySelector('header.top');const f=()=>hd.classList.toggle('scrolled',scrollY>60);f();addEventListener('scroll',f,{passive:true})})();
+
+/* Pages du site : chaque page a son adresse (#actualites, #programme…) */
+(function(){
+  const PAGES={
+    accueil:{t:'SYNEO — La Synergie pour le développement',ids:['accueil','film','une','impact','flash']},
+    actualites:{t:'Actualités — SYNEO',ids:['roue','rubriques']},
+    programme:{t:'PRISME — SYNEO',ids:['prisme','conferences']},
+    'a-propos':{t:'Qui sommes-nous — SYNEO',ids:['apropos','equipe']},
+    partenaires:{t:'Partenaires — SYNEO',ids:['partenaires']},
+    contribuer:{t:'Contribuer — SYNEO',ids:['contribuer']},
+    contact:{t:'Contact — SYNEO',ids:['contact']}
+  };
+  const main=document.querySelector('main'), links=[...document.querySelectorAll('nav.rub a, .ft-nav a')];
+  function resolve(h){
+    if(PAGES[h]) return {page:h,target:null};
+    for(const k in PAGES) if(PAGES[k].ids.includes(h)) return {page:k,target:document.getElementById(h)};
+    return {page:'accueil',target:null};
+  }
+  let cur=null;
+  function go(){
+    const h=decodeURIComponent(location.hash.slice(1));
+    const {page,target}=resolve(h);
+    if(page!==cur){
+      [...main.children].forEach(el=>{ if(el.id) el.hidden=!PAGES[page].ids.includes(el.id) });
+      main.dataset.page=page; document.title=PAGES[page].t; cur=page;
+      links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+page));
+      dispatchEvent(new Event('resize'));
+    }
+    const first=PAGES[page].ids[0];
+    if(target && target.id!==first) requestAnimationFrame(()=>{const y=target.getBoundingClientRect().top+scrollY-90;scrollTo({top:y,behavior:'instant'});dispatchEvent(new Event('scroll'))});
+    else {scrollTo({top:0,behavior:'instant'});dispatchEvent(new Event('scroll'))}
+  }
+  addEventListener('hashchange',go); go();
+})();
+
+/* Copier */
+function copy(txt,btn){
+  const done=()=>{const o=btn.textContent;btn.textContent='Copié';setTimeout(()=>btn.textContent=o,1500)};
+  if(navigator.clipboard){navigator.clipboard.writeText(txt).then(done).catch(()=>{btn.textContent=txt})}else{btn.textContent=txt}
+}
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',()=>copy(b.dataset.copy,b)));
+
+/* Formulaire contributeur */
+const form=document.getElementById('form'); let msg='';
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  const v=id=>document.getElementById(id).value.trim();
+  const ok=['f-nom','f-tel','f-titre','f-txt'].every(id=>v(id));
+  document.getElementById('f-err').hidden=ok;
+  if(!ok) return;
+  msg=`Proposition de contenu SYNEO\nRubrique : ${v('f-rub')}\nTitre : ${v('f-titre')}\nAuteur : ${v('f-nom')} (${v('f-tel')})\n\n${v('f-txt')}`;
+  document.getElementById('f-wa').href='https://wa.me/237657300479?text='+encodeURIComponent(msg);
+  document.getElementById('f-ok').hidden=false;
+});
+document.getElementById('f-copy').addEventListener('click',e=>copy(msg,e.currentTarget));
+
+/* Accueil : prisme doré et nuage de points en trame (halftone) */
+(function(){
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function rng(seed){let s=seed>>>0;return()=>((s=(s*1664525+1013904223)>>>0)/4294967296)}
+  function mix(a,b,t){return a.map((v,i)=>Math.round(v+(b[i]-v)*t))}
+  const ORANGE=[236,96,22], GOLD=[245,176,62], PALE=[255,214,120];
+  function setup(cv){const r=cv.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);cv.width=Math.max(1,r.width*d);cv.height=Math.max(1,r.height*d);const ctx=cv.getContext('2d');ctx.setTransform(d,0,0,d,0,0);return{ctx,w:r.width,h:r.height}}
+  function side(p,a,b){return (b[0]-a[0])*(p[1]-a[1])-(b[1]-a[1])*(p[0]-a[0])}
+  function inTri(p,a,b,c){const s1=side(p,a,b),s2=side(p,b,c),s3=side(p,c,a);return (s1>=0&&s2>=0&&s3>=0)||(s1<=0&&s2<=0&&s3<=0)}
+  function distSeg(p,a,b){const dx=b[0]-a[0],dy=b[1]-a[1],t=Math.max(0,Math.min(1,((p[0]-a[0])*dx+(p[1]-a[1])*dy)/(dx*dx+dy*dy)));return Math.hypot(p[0]-a[0]-t*dx,p[1]-a[1]-t*dy)}
+
+  /* Prisme 3D : pyramide dorée en trame de points, qui tourne, avec rayons de lumière */
+  const pc=document.getElementById('pyr');
+  let anim=0, visible=true, P=null;
+  const L=(()=>{const v=[-.55,.62,.7],n=Math.hypot(...v);return v.map(x=>x/n)})();
+  function pyramid(){
+    cancelAnimationFrame(anim);
+    const {ctx,w,h}=setup(pc); const R=rng(7);
+    const step=Math.max(4.6,Math.min(7,w/100)), grid=[];
+    for(let y=0,row=0;y<h+step;y+=step*.87,row++)
+      for(let x=(row%2)*step/2;x<w+step;x+=step) grid.push([x,y,.78+R()*.22]);
+    P={ctx,w,h,step,grid,t0:performance.now()};
+    if(reduce){frame(performance.now(),0.62);return}
+    loop();
+  }
+  function loop(){anim=requestAnimationFrame(now=>{if(visible&&!document.hidden) frame(now); loop()})}
+  function frame(now,fixed){
+    const {ctx,w,h,step,grid,t0}=P;
+    const t=(now-t0)/1000, th=fixed??(0.5+t*0.32), phi=0.3, H=1.5;
+    const fade=fixed!=null?1:Math.min(1,t/0.9);
+    const s=Math.min(w*(w<700?.28:.21),h*.33), cx=w*.5, cy=h-s*.62-8;
+    const ct=Math.cos(th), st=Math.sin(th), cp=Math.cos(phi), sp=Math.sin(phi);
+    const V=[[0,H,0],[-1,0,-1],[1,0,-1],[1,0,1],[-1,0,1]].map(([x,y,z])=>{
+      const x1=x*ct+z*st, z1=-x*st+z*ct;          // rotation verticale
+      const y2=y*cp-z1*sp, z2=y*sp+z1*cp;         // vue légèrement plongeante
+      const f=7/(7-z2);
+      return {p:[x1,y2,z2],s:[cx+x1*s*f,cy-y2*s*f]};
+    });
+    const faces=[];
+    for(let i=1;i<=4;i++){
+      const a=V[0],b=V[i],c=V[i%4+1];
+      const u=b.p.map((v,k)=>v-a.p[k]), v=c.p.map((v,k)=>v-a.p[k]);
+      let n=[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]];
+      const m=[(a.p[0]+b.p[0]+c.p[0])/3,(a.p[1]+b.p[1]+c.p[1])/3-H/4,(a.p[2]+b.p[2]+c.p[2])/3];
+      if(n[0]*m[0]+n[1]*m[1]+n[2]*m[2]<0) n=n.map(x=>-x);
+      const nl=Math.hypot(...n); n=n.map(x=>x/nl);
+      if(n[2]>0.02){
+        const lam=Math.max(0,n[0]*L[0]+n[1]*L[1]+n[2]*L[2]);
+        faces.push({tri:[a.s,b.s,c.s],lam,col:mix(ORANGE,PALE,Math.pow(lam,1.1))});
+      }
+    }
+    const A=V[0].s;
+    ctx.clearRect(0,0,w,h); ctx.globalAlpha=fade;
+
+    // halo et rayons dorés derrière la pyramide
+    const g=ctx.createRadialGradient(A[0],A[1],0,A[0],A[1],w*.42);
+    g.addColorStop(0,'rgba(255,214,120,.26)'); g.addColorStop(.25,'rgba(245,176,62,.1)'); g.addColorStop(1,'rgba(245,176,62,0)');
+    ctx.fillStyle=g; ctx.fillRect(0,0,w,h);
+    const N=16;
+    for(let i=0;i<N;i++){
+      const ang=i/N*6.2832+t*.06, len=w*(.55+.35*((i*37)%7)/7);
+      const ex=A[0]+Math.cos(ang)*len, ey=A[1]+Math.sin(ang)*len;
+      const lg=ctx.createLinearGradient(A[0],A[1],ex,ey);
+      const pulse=.26+.14*Math.sin(t*1.6+i*1.7);
+      lg.addColorStop(0,`rgba(255,205,105,${pulse})`); lg.addColorStop(1,'rgba(255,205,105,0)');
+      ctx.strokeStyle=lg; ctx.lineWidth=i%3?1.4:3.2;
+      ctx.beginPath(); ctx.moveTo(A[0],A[1]); ctx.lineTo(ex,ey); ctx.stroke();
+    }
+    // lueur au sol
+    ctx.save(); ctx.translate(cx,cy); ctx.scale(1,.22);
+    const gg=ctx.createRadialGradient(0,0,0,0,0,s*1.7); gg.addColorStop(0,'rgba(245,160,50,.45)'); gg.addColorStop(1,'rgba(245,160,50,0)');
+    ctx.fillStyle=gg; ctx.beginPath(); ctx.arc(0,0,s*1.7,0,6.2832); ctx.fill(); ctx.restore();
+
+    // remplissage léger des faces (donne du corps entre les points)
+    faces.forEach(f=>{ctx.fillStyle=`rgba(${f.col[0]},${f.col[1]},${f.col[2]},.22)`;ctx.beginPath();ctx.moveTo(...f.tri[0]);ctx.lineTo(...f.tri[1]);ctx.lineTo(...f.tri[2]);ctx.closePath();ctx.fill()});
+
+    // trame de points
+    const top=Math.min(...faces.flatMap(f=>f.tri.map(p=>p[1]))), H2=cy-top+s*.3;
+    for(const [x,y,k] of grid){
+      let face=null;
+      for(const f of faces){ if(inTri([x,y],...f.tri)){face=f;break} }
+      if(face){
+        const v=Math.max(0,Math.min(1,(y-top)/H2));
+        const c=mix(face.col,ORANGE,v*.35*(1-face.lam));
+        ctx.fillStyle=`rgb(${c[0]},${c[1]},${c[2]})`;
+        ctx.beginPath(); ctx.arc(x,y,step*.5*k*(.75+.25*face.lam),0,6.2832); ctx.fill();
+      }else{
+        const d=Math.hypot(x-A[0],(y-A[1])*1.15)/w;
+        const ink=(.17-d*.3)*k;
+        if(ink>.03){ctx.fillStyle='rgba(242,150,45,.55)';ctx.beginPath();ctx.arc(x,y,ink*step*.75,0,6.2832);ctx.fill()}
+      }
+    }
+    // arêtes lumineuses
+    const edges=()=>faces.forEach(f=>{ctx.beginPath();ctx.moveTo(...f.tri[0]);ctx.lineTo(...f.tri[1]);ctx.lineTo(...f.tri[2]);ctx.closePath();ctx.stroke()});
+    ctx.save(); ctx.lineJoin='round';
+    ctx.strokeStyle='rgba(200,95,15,.55)'; ctx.lineWidth=3.2; edges();
+    ctx.shadowColor='rgba(255,185,60,.6)'; ctx.shadowBlur=5;
+    ctx.strokeStyle='rgba(255,228,160,.85)'; ctx.lineWidth=1.4; edges();
+    ctx.restore();
+    // éclat au sommet
+    const sg=ctx.createRadialGradient(A[0],A[1],0,A[0],A[1],7); sg.addColorStop(0,'rgba(255,245,215,.45)'); sg.addColorStop(1,'rgba(255,220,140,0)');
+    ctx.fillStyle=sg; ctx.beginPath(); ctx.arc(A[0],A[1],7,0,6.2832); ctx.fill();
+    ctx.globalAlpha=1;
+  }
+  new IntersectionObserver(es=>{visible=es[0].isIntersecting}).observe(pc);
+  /* Nuage de points en bas à gauche */
+  const dc=document.getElementById('dots');
+  function field(){
+    const {ctx,w,h}=setup(dc); const R=rng(21); const step=7;
+    ctx.clearRect(0,0,w,h);
+    for(let y=0,row=0;y<h+step;y+=step*.87,row++){
+      for(let x=(row%2)*step/2;x<w+step;x+=step){
+        const d=Math.hypot(x/w,(h-y)/h*1.1);
+        let ink=Math.max(0,.66-d)*1.05*(.55+R()*.45);
+        if(ink<.05) continue; ink=Math.min(1,ink);
+        const c=mix(GOLD,ORANGE,Math.min(1,ink*1.3));
+        ctx.fillStyle=`rgba(${c[0]},${c[1]},${c[2]},.55)`;
+        ctx.beginPath(); ctx.arc(x,y,ink*step*.55,0,6.2832); ctx.fill();
+      }
+    }
+  }
+  function all(){pyramid();field()}
+  all();
+  let rt; addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(all,150)});
+})();
+
+/* Contact : prisme flottant d'où pendent 5 fils de lumière (les filières), éclats triangulaires qui dérivent */
+(function(){
+  const cv=document.getElementById('sea'); if(!cv) return;
+  const ctx=cv.getContext('2d'), reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const FIL=['#F2701E','#E2A21B','#2E9C8A','#3D78C9','#7B5BC2'];
+  let w,h,parts=[],raf=0,vis=false,mx=0,my=0;
+  function rnd(a,b){return a+Math.random()*(b-a)}
+  function size(){
+    const r=cv.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);
+    w=r.width;h=r.height;cv.width=w*d;cv.height=h*d;ctx.setTransform(d,0,0,d,0,0);
+    const n=Math.round(w*h/7000); parts=[];
+    for(let i=0;i<n;i++){const z=rnd(.2,1);parts.push({x:rnd(0,w),y:rnd(0,h),z,tri:Math.random()<.22,r:rnd(.5,1.8)*z,a:rnd(0,6.28),va:rnd(-.02,.02),ph:rnd(0,6.28),gold:Math.random()<.35})}
+  }
+  function prism(t){
+    const wide=w>860, cx=w*(wide?.7:.5)+mx*14, cy=h*(wide?.3:.74)+Math.sin(t*.6)*h*.025+my*8;
+    const s=Math.min(w,h)*(wide?.1:.12), H=1.45, th=t*.35, phi=.32;
+    const ct=Math.cos(th),st=Math.sin(th),cp=Math.cos(phi),sp=Math.sin(phi);
+    const V=[[0,H,0],[-1,0,-1],[1,0,-1],[1,0,1],[-1,0,1]].map(([x,y,z])=>{const x1=x*ct+z*st,z1=-x*st+z*ct;const y2=y*cp-z1*sp,z2=y*sp+z1*cp;return{p:[x1,y2,z2],s:[cx+x1*s,cy-(y2-H*.45)*s]}});
+    // lueur intérieure
+    const g=ctx.createRadialGradient(cx,cy,0,cx,cy,s*2.6);g.addColorStop(0,'rgba(255,225,190,.35)');g.addColorStop(1,'rgba(255,225,190,0)');
+    ctx.fillStyle=g;ctx.beginPath();ctx.arc(cx,cy,s*2.6,0,6.2832);ctx.fill();
+    // fils de lumière sous la base
+    const bx=cx, by=cy+H*.45*s*.95, len=h*(wide?.6:.4);
+    for(let k=0;k<13;k++){
+      const col=k<5?FIL[k]:'rgba(255,255,255,1)', i=k<5?k-2:(k-9)*.6, main=k<5;
+      ctx.beginPath();
+      for(let j=0;j<=44;j++){
+        const p=j/44, y=by+p*len;
+        const x=bx+i*s*.32*(1+p*2.2)+Math.sin(p*5.5-t*1.4+k*1.3)*s*.35*p+mx*20*p;
+        j?ctx.lineTo(x,y):ctx.moveTo(x,y);
+      }
+      const lg=ctx.createLinearGradient(0,by,0,by+len);
+      lg.addColorStop(0,main?col:'rgba(255,255,255,.35)');lg.addColorStop(1,main?col+'00':'rgba(255,255,255,0)');
+      ctx.strokeStyle=lg;ctx.lineWidth=main?1.6:.7;ctx.shadowColor=main?col:'#fff';ctx.shadowBlur=main?8:0;ctx.stroke();
+    }
+    ctx.shadowBlur=0;
+    // faces translucides + arêtes blanches lumineuses
+    const L=[-.5,.6,.65];
+    for(let i=1;i<=4;i++){
+      const a=V[0],b=V[i],c=V[i%4+1];
+      const u=b.p.map((v,k)=>v-a.p[k]),v=c.p.map((v,k)=>v-a.p[k]);
+      let n=[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]];
+      const m=[(a.p[0]+b.p[0]+c.p[0])/3,(a.p[1]+b.p[1]+c.p[1])/3-H/4,(a.p[2]+b.p[2]+c.p[2])/3];
+      if(n[0]*m[0]+n[1]*m[1]+n[2]*m[2]<0)n=n.map(x=>-x);
+      const nl=Math.hypot(...n);n=n.map(x=>x/nl); if(n[2]<=0) continue;
+      const lam=Math.max(0,n[0]*L[0]+n[1]*L[1]+n[2]*L[2]);
+      ctx.beginPath();ctx.moveTo(...a.s);ctx.lineTo(...b.s);ctx.lineTo(...c.s);ctx.closePath();
+      ctx.fillStyle=`rgba(255,236,215,${.06+.22*lam})`;ctx.fill();
+      ctx.save();ctx.shadowColor='rgba(255,230,200,.9)';ctx.shadowBlur=14;ctx.strokeStyle='rgba(255,246,235,.9)';ctx.lineWidth=1.3;ctx.stroke();ctx.restore();
+    }
+  }
+  function draw(now){
+    const t=now/1000; ctx.clearRect(0,0,w,h);
+    const bg=ctx.createRadialGradient(w*.7,h*.25,0,w*.7,h*.25,Math.max(w,h)*.8);
+    bg.addColorStop(0,'rgba(40,28,70,.55)');bg.addColorStop(1,'rgba(7,11,22,0)');ctx.fillStyle=bg;ctx.fillRect(0,0,w,h);
+    for(const p of parts){
+      if(!reduce){p.y+=.25*p.z+.05;p.x+=Math.sin(t*.5+p.ph)*.15*p.z;p.a+=p.va;if(p.y>h+8){p.y=-8;p.x=rnd(0,w)}}
+      const x=p.x+mx*30*p.z, y=p.y+my*20*p.z, al=.25+.6*p.z;
+      ctx.fillStyle=ctx.strokeStyle=p.gold?`rgba(255,196,110,${al})`:`rgba(225,235,255,${al})`;
+      if(p.tri){const r=p.r*3;ctx.beginPath();for(let k=0;k<3;k++){const an=p.a+k*2.094;ctx[k?'lineTo':'moveTo'](x+Math.cos(an)*r,y+Math.sin(an)*r)}ctx.closePath();ctx.lineWidth=.8;ctx.stroke()}
+      else{ctx.beginPath();ctx.arc(x,y,p.r,0,6.2832);ctx.fill()}
+    }
+    prism(reduce?1.2:t);
+  }
+  function loop(now){draw(now); if(vis&&!reduce) raf=requestAnimationFrame(loop)}
+  size(); draw(performance.now());
+  new IntersectionObserver(es=>{vis=es[0].isIntersecting;cancelAnimationFrame(raf);if(vis&&!reduce) raf=requestAnimationFrame(loop)}).observe(cv);
+  let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>{size();draw(performance.now())},150)});
+  cv.parentElement.addEventListener('pointermove',e=>{const r=cv.getBoundingClientRect();mx=(e.clientX-r.left)/r.width-.5;my=(e.clientY-r.top)/r.height-.5});
+
+  // formulaire de contact → message WhatsApp prêt
+  const f=document.getElementById('cform');
+  f.addEventListener('submit',e=>{
+    e.preventDefault();
+    const v=id=>document.getElementById(id).value.trim();
+    const ok=v('c-nom')&&v('c-msg'); document.getElementById('c-err').hidden=!!ok; if(!ok) return;
+    const msg=`Bonjour SYNEO,\n${v('c-msg')}\n\n${v('c-nom')}${v('c-tel')?' · '+v('c-tel'):''}`;
+    const a=document.getElementById('c-wa'); a.href='https://wa.me/237657300479?text='+encodeURIComponent(msg); a.hidden=false;
+  });
+})();
+
+/* Bâtir ensemble — animation pilotée par le défilement */
+(function(){
+  const sec=document.getElementById('impact'); if(!sec) return;
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const s1=sec.querySelector('.scn'), st1=s1.querySelector('.sc-stick'), st2=st1;
+  const pills=[...s1.querySelectorAll('.pill')];
+  const txt=s1.querySelector('.imp-txt');
+  txt.innerHTML=txt.textContent.trim().split(/\s+/).map(w=>`<span class="w">${w}</span>`).join(' ');
+  const words=[...txt.querySelectorAll('.w')];
+  const cl=x=>Math.max(0,Math.min(1,x)), ease=x=>1-Math.pow(1-x,3), lerp=(a,b,k)=>a+(b-a)*k;
+  function prog(el){const r=el.getBoundingClientRect();return reduce?1:cl(-r.top/(r.height-innerHeight))}
+  let tick=false;
+  function update(){
+    tick=false;
+    // scène 1 : la parenthèse s'ouvre, les questions apparaissent
+    const P=prog(s1), mob=innerWidth<760;
+    const p=cl(P/.42), xo=cl((P-.42)/.05), x=cl((P-.48)/.06), q=cl((P-.5)/.5);
+    st1.style.setProperty('--o1',(1-xo).toFixed(3)); st1.style.setProperty('--y1',(-xo*6)+'vh');
+    st1.style.setProperty('--o2',x.toFixed(3)); st1.style.setProperty('--y2',((1-x)*6)+'vh');
+    st1.querySelector('.sc-line').style.pointerEvents=x>.5?'none':'auto';
+    const open=ease(cl(p/.35));
+    const rows=Math.ceil(pills.length/2), ph=rows*44;
+    const pw=mob?innerWidth:Math.min(560,innerWidth*.42);
+    st1.style.setProperty('--pw',(pw*open)+'px');
+    st1.style.setProperty('--ph',(mob?ph*open:Math.max(10,ph*open))+'px');
+    st1.style.setProperty('--ps',(1+(ph/58-1)*open).toFixed(3));
+    const shown=Math.floor(cl((p-.25)/.6)*pills.length+.001);
+    pills.forEach((el,i)=>el.classList.toggle('on',i<shown));
+    // scène 2 : le titre rétrécit, le paragraphe sort du flou mot par mot
+    const k=ease(cl(q/.35));
+    st2.style.setProperty('--hs',lerp(1.25,.82,k).toFixed(3));
+    st2.style.setProperty('--ty',lerp(14,0,k)+'vh');
+    st2.style.setProperty('--ts',ease(cl((q-.05)/.25)).toFixed(3));
+    const n=Math.floor(cl((q-.3)/.55)*words.length+.001);
+    words.forEach((w,i)=>w.classList.toggle('on',i<n));
+    st2.style.setProperty('--lo',cl((q-.85)/.1).toFixed(3));
+  }
+  addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(update)}},{passive:true});
+  addEventListener('resize',update); update();
+  // chiffres qui comptent
+  const nums=[...sec.querySelectorAll('[data-count]')];
+  function count(el){const end=+el.dataset.count,pre=el.dataset.pre||'',suf=el.dataset.suf||'',t0=performance.now();(function f(now){const k=Math.min(1,(now-t0)/1400),e=1-Math.pow(1-k,3);el.textContent=pre+Math.round(end*e)+suf;if(k<1)requestAnimationFrame(f)})(t0)}
+  if(!reduce){const io=new IntersectionObserver(es=>{if(es[0].isIntersecting){nums.forEach(count);io.disconnect()}},{threshold:.3});io.observe(sec.querySelector('.imp-stats'))}
+})();
+
+
+/* Le film : la vidéo s'agrandit avec le défilement */
+(function(){
+  const sec=document.getElementById('film'); if(!sec) return;
+  const st=sec.querySelector('.vx-stick'), v=document.getElementById('vxVideo'), snd=document.getElementById('vxSound');
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const ease=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+  let tick=false;
+  function update(){
+    tick=false;
+    const r=sec.getBoundingClientRect(), vh=innerHeight, vw=innerWidth;
+    const p=reduce?1:Math.max(0,Math.min(1,-r.top/(r.height-vh)));
+    const e=ease(Math.min(1,p/.62));
+    const w0=vw<700?vw*.82:Math.min(vw*.42,760), h0=w0*9/16;
+    const w=w0+(vw-w0)*e, h=h0+(vh-h0)*e;
+    st.style.setProperty('--w',w+'px');
+    st.style.setProperty('--h',h+'px');
+    st.style.setProperty('--rad',(24*(1-e))+'px');
+    st.style.setProperty('--hh',(h0/2)+'px');
+    const gap=Math.max(20,Math.min(40,vw*.025)), avail=(vw-w0)/2-gap-24;
+    st.style.setProperty('--w0',w0+'px'); st.style.setProperty('--gap',gap+'px');
+    st.style.setProperty('--fs',Math.max(18,Math.min(64,avail/6.3))+'px');
+    st.style.setProperty('--sp',e.toFixed(3));
+    st.style.setProperty('--o',Math.max(0,1-e*1.6).toFixed(3));
+    const so=Math.max(0,Math.min(1,(e-.7)/.3));
+    st.style.setProperty('--so',so.toFixed(3)); st.style.setProperty('--sp-e',so>.5?'auto':'none');
+  }
+  addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(update)}},{passive:true});
+  addEventListener('resize',update); update();
+  // lecture seulement quand la section est visible
+  new IntersectionObserver(es=>{es[0].isIntersecting?v.play().catch(()=>{}):v.pause()},{threshold:.15}).observe(sec);
+  snd.addEventListener('click',()=>{
+    v.muted=!v.muted; if(!v.muted){v.currentTime=0;v.play().catch(()=>{})}
+    snd.setAttribute('aria-pressed',String(!v.muted));
+    snd.querySelector('span').textContent=v.muted?'Activer le son':'Couper le son';
+  });
+})();
+
+/* Roue des rubriques : rotation pilotée par le défilement */
+(function(){
+  const sec=document.getElementById('roue'); if(!sec) return;
+  const st=sec.querySelector('.wh-stick'), items=[...sec.querySelectorAll('.wi')], dots=[...sec.querySelectorAll('.wh-dots i')];
+  const circle=document.getElementById('whCircle'), svg=sec.querySelector('.wh-ring');
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const cl=x=>Math.max(0,Math.min(1,x)), ease=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+  let R=800, step=30, tick=false;
+  function layout(){
+    const vw=innerWidth, vh=innerHeight, mob=vw<700;
+    R=Math.max(vh*.8, vw*(mob?1.1:.62));
+    const side=mob?vw*.9:vw*.4;
+    step=Math.asin(Math.min(.95,side/R))*180/Math.PI;
+    st.style.setProperty('--R',R+'px');
+    st.style.setProperty('--cy',(Math.max(vh*(mob?.44:.39),340)+R)+'px');
+    svg.setAttribute('viewBox',`${-R} ${-R} ${2*R} ${2*R}`);
+    circle.setAttribute('r',R); circle.setAttribute('cx',0); circle.setAttribute('cy',0);
+    const circ=2*Math.PI*R, n=Math.round(circ/9);
+    circle.setAttribute('stroke-dasharray',`1.4 ${circ/n-1.4}`);
+    items.forEach((el,i)=>el.style.setProperty('--a',(i*step)+'deg'));
+    update();
+  }
+  function update(){
+    tick=false;
+    const r=sec.getBoundingClientRect();
+    const p=reduce?0:cl(-r.top/(r.height-innerHeight));
+    const raw=p*(items.length-1), i=Math.min(items.length-2,Math.floor(raw)), fr=raw-i;
+    const f=reduce?0:(raw>=items.length-1?items.length-1:i+ease(cl((fr-.18)/.64)));
+    st.style.setProperty('--rot',(-f*step)+'deg');
+    const act=Math.round(f);
+    items.forEach((el,k)=>el.classList.toggle('dim',k!==act));
+    dots.forEach((d,k)=>d.classList.toggle('on',k===act));
+  }
+  addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(update)}},{passive:true});
+  addEventListener('resize',layout); layout();
+})();
+</script>
+</body>
+</html>
