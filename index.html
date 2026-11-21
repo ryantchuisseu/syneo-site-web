@@ -25,6 +25,7 @@
 
 
 
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=Instrument+Serif&family=IBM+Plex+Mono:wght@500&display=swap">
@@ -503,7 +504,7 @@ textarea{min-height:120px;resize:vertical}
 .scn .imp-txt .w.on{opacity:1;filter:blur(0)}
 .scn .imp-link{opacity:var(--lo,1)}
 .imp .imp-stats{margin-top:0}
-@media (max-width:760px){
+@media (max-width:900px){
   .sc-line{flex-direction:column;gap:14px}
   .sc-a,.sc-b{text-align:center;flex:none;font-size:28px}
   .par{display:none}
@@ -581,7 +582,7 @@ footer .r{margin-left:0}
 .tb-cap{text-align:center;color:var(--muted);font-size:14px;margin-top:18px}
 @media (max-width:900px){.tb-grid{grid-template-columns:1fr;max-width:520px}.tb-card p{min-height:0}}
 /* ===== Version téléphone ===== */
-@media (max-width:760px){
+@media (max-width:900px){
   /* Film : carte 16:9 pleine largeur, sans agrandissement */
   .vx{height:auto!important;margin-top:0!important;padding:8px 16px 40px}
   .vx-stick{position:static;height:auto;display:grid;gap:14px;overflow:visible}
@@ -624,12 +625,13 @@ footer .r{margin-left:0}
   .guide-btn,.guide-btn .av-i{width:56px;height:56px}
 }
 /* Animations téléphone */
-@media (max-width:760px){
+@media (max-width:900px){
   .rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
   .rv.in{opacity:1;transform:none}
   .vx-frame{will-change:transform}
 }
-@media (max-width:760px) and (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
+@media (max-width:900px) and (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
+@media (max-width:400px){.hx-chip{max-width:100%;flex-wrap:wrap;justify-content:center;row-gap:4px}}
 footer{background:var(--navy);color:#C9D5EA;font-size:14px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;padding-block:26px}
 footer b{color:#fff;font-family:var(--display);font-size:18px}
@@ -1070,7 +1072,7 @@ footer .r{margin-left:auto}
   const t=Date.UTC(2026,10,18,10,0,0), el=document.getElementById('cd');
   function tick(){
     let d=t-Date.now();
-    if(d<=0){el.textContent='En cours / terminé';return}
+    if(d<=0){el.textContent='Lancé ✓';const c=el.closest('.hx-chip');if(c){const t=c.querySelector('span:nth-child(2)');if(t)t.innerHTML='PRISME est <b>lancé</b><span class="chip-x"> · 18.11 · ENSPY</span>'}return}
     const j=Math.floor(d/864e5), h=Math.floor(d%864e5/36e5), m=Math.floor(d%36e5/6e4);
     el.textContent='J-'+j+' · '+String(h).padStart(2,'0')+'h '+String(m).padStart(2,'0')+'min';
   }
@@ -1439,7 +1441,7 @@ document.getElementById('f-copy').addEventListener('click',e=>copy(msg,e.current
   let tick=false;
   function update(){
     tick=false;
-    if(innerWidth<=760) return;
+    if(innerWidth<=900) return;
     // scène 1 : la parenthèse s'ouvre, les questions apparaissent
     const P=prog(s1), mob=innerWidth<760;
     const p=cl(P/.42), xo=cl((P-.42)/.05), x=cl((P-.48)/.06), q=cl((P-.5)/.5);
@@ -1481,7 +1483,7 @@ document.getElementById('f-copy').addEventListener('click',e=>copy(msg,e.current
   let tick=false;
   function update(){
     tick=false;
-    if(innerWidth<=760) return;
+    if(innerWidth<=900) return;
     const r=sec.getBoundingClientRect(), vh=innerHeight, vw=innerWidth;
     const p=reduce?1:Math.max(0,Math.min(1,-r.top/(r.height-vh)));
     const e=ease(Math.min(1,p/.62));
@@ -1549,7 +1551,7 @@ document.getElementById('f-copy').addEventListener('click',e=>copy(msg,e.current
 
 /* Animations téléphone : liées au défilement, sans épinglage */
 (function(){
-  const mq=matchMedia('(max-width:760px)'), reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const mq=matchMedia('(max-width:900px)'), reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
   const cl=x=>Math.max(0,Math.min(1,x)), ease=x=>1-Math.pow(1-x,3);
   const rvSel='.tb-card,.tb-slogan,.art-card,.rubcol h3,.step,.mem,.tier,.pgrp,.talk,.dk-3>div,.dk-stats>div,.hx-stat,.imp-stats>div,.ed-head,.wi';
   let io=null;
